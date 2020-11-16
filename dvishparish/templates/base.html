@@ -21,7 +21,7 @@
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
     <!-- This file stores project-specific CSS -->
-    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/material-kit.min.css' %}">    
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     
     {% endcompress %}
@@ -102,6 +102,7 @@
 
       <!-- place project specific Javascript in this file -->
       {% compress js %}
+      <link rel="stylesheet" type="text/css" href="{% static 'js/material-kit.min.js' %}">    
       <script src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
 

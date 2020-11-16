@@ -25,7 +25,7 @@ DEBUG = env.bool("DJANGO_DEBUG", False)
 # In Windows, this must be set to your system time zone.
 TIME_ZONE = "Europe/Kiev"
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "uk"
 # https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
@@ -69,7 +69,15 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "django_celery_beat",
+    "rolepermissions",
 ]
+
+# role config
+ROLEPERMISSIONS_MODULE = 'dvishparish.roles'
+
+# ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
+
+
 
 LOCAL_APPS = [
     "dvishparish.users.apps.UsersConfig",
