@@ -16,6 +16,9 @@ class User(AbstractUser):
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
     office =  models.ForeignKey(BankOffice, related_name='users', on_delete=models.CASCADE, null=True, blank=True) 
 
+    def get_groups_display(self):
+        return " ".join(self.groups.all().values_list('name',flat=True))
+
     def get_absolute_url(self):
         """Get url for user's detail view.
 

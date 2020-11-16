@@ -4,12 +4,13 @@ from django.contrib.auth import get_user_model
 
 from dvishparish.users.forms import UserChangeForm, UserCreationForm
 
+from rolepermissions.admin import RolePermissionsUserAdminMixin
+
 User = get_user_model()
 
 
 @admin.register(User)
-class UserAdmin(auth_admin.UserAdmin):
-
+class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
     form = UserChangeForm
     add_form = UserCreationForm
     fieldsets = (("User", {"fields": ("name",)}),) + tuple(

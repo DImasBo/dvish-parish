@@ -63,6 +63,7 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.forms",
 ]
+
 THIRD_PARTY_APPS = [
     "crispy_forms",
     "allauth",
@@ -73,14 +74,17 @@ THIRD_PARTY_APPS = [
 ]
 
 # role config
-ROLEPERMISSIONS_MODULE = 'dvishparish.roles'
+ROLEPERMISSIONS_MODULE = 'dvishparish.manager_roles.roles'
 
-# ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
+ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
+# ROLEPERMISSIONS_REGISTER_ADMIN = True
 
 
 
 LOCAL_APPS = [
     "dvishparish.users.apps.UsersConfig",
+    "dvishparish.manager_roles.apps.ManagerRolesConfig",
+    # "dvishparish.plans.apps.PlansConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -101,7 +105,7 @@ AUTHENTICATION_BACKENDS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "users:redirect"
+LOGIN_REDIRECT_URL = "users:detail"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
 
