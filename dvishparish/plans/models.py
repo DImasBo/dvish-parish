@@ -1,23 +1,36 @@
 from django.db import models
-from users.models import User, BankOffice
+from dvishparish.users.models import User, BankOffice
+from datetime import datetime
 
-class Product(models.Model):
-    name = models.CharField(max_length=150)
+class KPI(models.Model):
+    indicator_name = models.CharField(max_length=150)
 
-class AbstractPlan:
-    amount = models.PositiveIntegerField()
-    class Meta:
-        abstract = True
+    def __str__(self):
+        return self.indicator_name
 
-class GeneralPlan(AbstractPlan): 
-    date_from = models.DateTimeField()
+class GeneralPlan(models.Model): 
+    date_from = models.DateTimeField(default=datetime.now())
     date_to = models.DateTimeField()
-    product = models.ForeignKey(Product, related_name='generals_plans' , on_delete=models.CASCADE) 
+    KPI = models.ForeignKey(KPI, related_name='generals_plans' , on_delete=models.CASCADE)
+    KPI_target_amount = models.PositiveIntegerField()
 
-class OfficePlan(AbstractPlan):
-    general_plan = models.ForeignKey(GeneralPlan, related_name='offices_plans', on_delete=models.CASCADE)
-    office = models.ForeignKey(BankOffice, related_name='offices_plans', on_delete=models.CASCADE)
+    def __str__(self):
+        return f"{self.KPI.__str__()} | {self.date_from} - {self.date_to} | {self.KPI_target_amount}"
 
-class ManagerPlan(AbstractPlan):
+class BankOfficePlan(models.Model):
+    general_plan = models.ForeignKey(GeneralPlan, related_name='bankoffice_plans', on_delete=models.CASCADE)
+    bankoffice = models.ForeignKey(BankOffice, related_name='bankoffice_plans', on_delete=models.CASCADE)
+    KPI = models.ForeignKey(KPI, related_name='bankoffice_plans' , on_delete=models.CASCADE) 
+    amount = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.KPI.__str__()} | {self.bankoffice.__str__()} - {self.amount} | {self.general_plan.__str__()}"
+
+class ManagerPlan(models.Model):
     general_plan = models.ForeignKey(GeneralPlan, related_name='manager_plans', on_delete=models.CASCADE)
     user = models.ForeignKey(User,  related_name='manager_plans', on_delete=models.CASCADE)
+    KPI = models.ForeignKey(KPI, related_name='manager_plans' , on_delete=models.CASCADE) 
+    amount = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.KPI.__str__()} | {self.user.__str__()} - {self.amount} | {self.general_plan.__str__()}"

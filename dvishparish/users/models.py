@@ -5,16 +5,19 @@ from django.db import models
 
 
 class BankOffice(models.Model):
-    number = models.PositiveIntegerField()
-    address = models.CharField(_("Name of User"), blank=True, max_length=255)
-    city = models.CharField(_("Name of User"), blank=True, max_length=255)
+    id = models.PositiveIntegerField(primary_key=True)
+    city = models.CharField( blank=True, max_length=255)
+    address = models.CharField( blank=True, max_length=255)
+
+    def __str__(self):
+        return f"№{self.id} {self.city} {self.address}"
 
 class User(AbstractUser):
     """Default user for dvishparish."""
 
     #: First and last name do not cover name patterns around the globe
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
-    office =  models.ForeignKey(BankOffice, related_name='users', on_delete=models.CASCADE, null=True, blank=True) 
+    bankoffice =  models.ForeignKey(BankOffice, related_name='users', on_delete=models.CASCADE, null=True, blank=True) 
 
     def get_groups_display(self):
         return " ".join(self.groups.all().values_list('name',flat=True))

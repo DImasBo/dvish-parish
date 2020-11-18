@@ -84,7 +84,7 @@ ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
 LOCAL_APPS = [
     "dvishparish.users.apps.UsersConfig",
     "dvishparish.manager_roles.apps.ManagerRolesConfig",
-    # "dvishparish.plans.apps.PlansConfig",
+    "dvishparish.plans.apps.PlansConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

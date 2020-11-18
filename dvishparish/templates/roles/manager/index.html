@@ -1,10 +1,55 @@
 {% extends "base.html" %}
+{% load plans %}
 {% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
 
 {% block content %}
 <div class="row">
-  <div class="col-md-6 offset-md-3">
-    {% block inner %}teste{% endblock %}
+  <div class="col-md-4 bg-primary text-light">
+      <h4>Ваші фінанси і Копілка</h4>
+      <p>Бонуси: 1500</p>
+      <p>Премія: 1500грн</p>
   </div>
+  <div class="col-md-4 bg-secondary text-light">
+    	<h4>Ваш план</h4>
+    	<p>
+    		{% for plan in user|current_manager_plans %}
+    			{{plan.KPI}} - {{plan.amount}}шт.
+    		{% endfor %}
+    	</p>
+  </div>
+
+  <div class="col-md-4 text-light"  style="background-color: #9c27b0!important">
+    	<h4>План депортамента ({{user.bankoffice}})</h4>
+    	<p>
+    		{% for plan in user|current_bankoffice_plans %}
+    			{{plan.KPI}} - {{plan.amount}}шт.
+    		{% endfor %}
+    	</p>
+
+  </div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<div class="list-group border bg-white">
+		  <a href="{% url 'manager_roles:manager_plans' %}" class="list-group-item list-group-item-action">
+		    Ваші плани
+		  </a>
+      <a href="{% url 'manager_roles:manager_bankoffice_plans' %}" class="list-group-item list-group-item-action">
+        Плани вашого банк офіса
+      </a>
+      
+
+		  <a href="#" class="list-group-item list-group-item-action">Ваші успіхи і прогрес</a>
+		  <a href="#" class="list-group-item list-group-item-action">
+        <i class="fa fa-money" aria-hidden="true"></i>
+        Копілка бонуси і премії 
+      </a>
+		  <a href="#" class="list-group-item list-group-item-action disabled">Калькулятор бонусів і премій</a>
+		</div>
+	</div>
+	<div class="col-md-9">
+		{% block inner %}
+		{% endblock %}
+	</div>
 </div>
 {% endblock %}

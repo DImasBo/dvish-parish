@@ -8,6 +8,14 @@ from rolepermissions.admin import RolePermissionsUserAdminMixin
 
 User = get_user_model()
 
+from .models import BankOffice
+
+
+@admin.register(BankOffice)
+class BankOfficeAdmin(admin.ModelAdmin):
+    list_display = ["id","city","address"]
+    list_filter = ['city']
+
 
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
@@ -18,3 +26,4 @@ class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
     )
     list_display = ["username", "name", "is_superuser"]
     search_fields = ["name"]
+    list_filter = ['groups']

@@ -16,7 +16,8 @@
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
 
     {% block css %}
-    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     {% compress css %}
@@ -55,6 +56,10 @@
                 {# URL provided by django-allauth/account/urls.py #}
                 <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'manager_roles:index' %}">{% trans "Dashboard" %}</a>
+              </li>
+
             {% else %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}

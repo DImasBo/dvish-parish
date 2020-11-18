@@ -7,6 +7,7 @@ User = get_user_model()
 
 
 class UserChangeForm(admin_forms.UserChangeForm):
+    
     class Meta(admin_forms.UserChangeForm.Meta):
         model = User
 
