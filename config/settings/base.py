@@ -134,7 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+#    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -226,8 +226,16 @@ X_FRAME_OPTIONS = "DENY"
 EMAIL_BACKEND = env(
     "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
 )
+
+
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-timeout
 EMAIL_TIMEOUT = 5
+
+# WhiteNoise
+# ------------------------------------------------------------------------------
+# http://whitenoise.evans.io/en/latest/django.html#using-whitenoise-in-development
+#INSTALLED_APPS = ["whitenoise.runserver_nostatic"] + INSTALLED_APPS  # noqa F405
 
 # ADMIN
 # ------------------------------------------------------------------------------
@@ -301,7 +309,7 @@ SOCIALACCOUNT_ADAPTER = "dvishparish.users.adapters.SocialAccountAdapter"
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
-INSTALLED_APPS += ["compressor"]
+#INSTALLED_APPS += ["compressor"]
 
 # Your stuff...
 # ------------------------------------------------------------------------------
