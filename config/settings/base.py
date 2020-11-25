@@ -70,20 +70,20 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "django_celery_beat",
-    "rolepermissions",
+#   "rolepermissions",
 ]
 
 # role config
-ROLEPERMISSIONS_MODULE = 'dvishparish.manager_roles.roles'
+#ROLEPERMISSIONS_MODULE = 'dvishparish.manager_roles.roles'
 
-ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
+#ROLEPERMISSIONS_REDIRECT_TO_LOGIN = True
 # ROLEPERMISSIONS_REGISTER_ADMIN = True
 
 
 
 LOCAL_APPS = [
     "dvishparish.users.apps.UsersConfig",
-    "dvishparish.manager_roles.apps.ManagerRolesConfig",
+#    "dvishparish.manager_roles.apps.ManagerRolesConfig",
     # "dvishparish.plans.apps.PlansConfig",
     # Your stuff: custom apps go here
 ]
