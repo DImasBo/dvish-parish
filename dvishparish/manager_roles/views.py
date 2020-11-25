@@ -11,6 +11,7 @@ class IndexManagerView(HasRoleMixin, LoginRequiredMixin, TemplateView):
     template_name = "roles/manager/index.html"
     allowed_roles = 'manager'
 
+
 class ManagerKPIsView(HasRoleMixin, LoginRequiredMixin, ListView):
     """Render Dashboard page."""
     template_name = "roles/manager/self_plans.html"
@@ -21,11 +22,13 @@ class ManagerKPIsView(HasRoleMixin, LoginRequiredMixin, ListView):
     def get_queryset(self):
         return self.model.objects.filter(user=self.request.user)
 
+
 class ResultDailyView(HasRoleMixin, LoginRequiredMixin, ListView):
     template_name = "roles/manager/result.html"
     model = ResultDaily
     paginate_by = 30
     allowed_roles = 'manager'
+
 
 class BankOfficePlansView(HasRoleMixin, LoginRequiredMixin, ListView):
     """Render Dashboard page."""
