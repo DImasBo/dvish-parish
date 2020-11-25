@@ -25,6 +25,10 @@ How to start
 sudo docker-compose -f local.yml build
 sudo docker-compose -f local.yml run --rm django python manager.py migrate
 sudo docker-compose -f local.yml up
+
+sudo docker-compose -f production.yml run --rm django python manage.py collectstatic
+
+
 ```
 
 Custom Bootstrap Compilation
