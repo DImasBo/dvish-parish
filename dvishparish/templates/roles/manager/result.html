@@ -2,21 +2,21 @@
 
 {% block inner %}
 <div class="container mt-2 ">
-	<h3>Ваші поточні цілі</h3>
+	<h3>Ваші результати</h3>
 	<table class="table bg-white">
 	    <thead>
 	        <tr>
 	            <th>KPI</th>
-	            <th>Amount</th>
-	            <th>Період</th>
+	            <th>Результа</th>
+	            <th>День</th>
 	        </tr>
 	    </thead>
 	    <tbody>
-	    	{% for plan in object_list %}
+	    	{% for result in object_list %}
 	        <tr>
-	            <td class="text-center">{{plan.KPI}}</td>
-	            <td>{{plan.amount}}</td>
-	            <td>{{plan.KPI.date_from}} - {{plan.KPI.date_to}} </td>
+	            <td class="text-center">{{result.KPI}}</td>
+	            <td>{{result.KPI_result_amount}}</td>
+	            <td>{{result.date_add}} </td>
 	        </tr>
 	        {% endfor %}
 	    </tbody>

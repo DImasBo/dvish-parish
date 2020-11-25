@@ -2,7 +2,8 @@ from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rolepermissions.mixins import HasRoleMixin
 
-from dvishparish.plans.models import ManagerPlan, BankOfficePlan
+from dvishparish.plans.models import ManagerKPI, BankOfficePlan
+from .models import ResultDaily
 
 
 class IndexManagerView(HasRoleMixin, LoginRequiredMixin, TemplateView):
@@ -10,17 +11,21 @@ class IndexManagerView(HasRoleMixin, LoginRequiredMixin, TemplateView):
     template_name = "roles/manager/index.html"
     allowed_roles = 'manager'
 
-
-class ManagerPlansView(HasRoleMixin, LoginRequiredMixin, ListView):
+class ManagerKPIsView(HasRoleMixin, LoginRequiredMixin, ListView):
     """Render Dashboard page."""
     template_name = "roles/manager/self_plans.html"
     allowed_roles = 'manager'
-    model = ManagerPlan
+    model = ManagerKPI
     paginate_by = 30
 
     def get_queryset(self):
         return self.model.objects.filter(user=self.request.user)
 
+class ResultDailyView(HasRoleMixin, LoginRequiredMixin, ListView):
+    template_name = "roles/manager/result.html"
+    model = ResultDaily
+    paginate_by = 30
+    allowed_roles = 'manager'
 
 class BankOfficePlansView(HasRoleMixin, LoginRequiredMixin, ListView):
     """Render Dashboard page."""

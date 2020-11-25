@@ -10,15 +10,15 @@ class Formula(models.Model):
     name = models.CharField(max_length=150)
     percentage_on_salary = models.DecimalField(
         default=20,
-        max_digits=8, 
+        max_digits=8,
         decimal_places=2,
         validators=[
             MinValueValidator(1)
         ])
-    
+
     percentage_of_the_plan = models.DecimalField(
         default=100,
-        max_digits=8, 
+        max_digits=8,
         decimal_places=2,
         validators=[
             MinValueValidator(100)
@@ -32,25 +32,25 @@ class KPI(models.Model):
     indicator_name = models.CharField(max_length=150)
     formula = models.ForeignKey(Formula, related_name='KPIs', on_delete=models.CASCADE, null=True, blank=True)
     formula_bankoffice = models.ForeignKey(Formula, related_name='KPIs_b', on_delete=models.CASCADE, null=True, blank=True)
-    
+
     target_amount = models.DecimalField(
-        default=0, 
-        max_digits=8, 
+        default=0,
+        max_digits=8,
         decimal_places=2,
         validators=[
         MinValueValidator(0)
         ])
 
-
+    date_from = models.DateTimeField(default=timezone.now())
+    date_to = models.DateTimeField()
+    
     class Meta:
         unique_together = ("formula", "formula_bankoffice")
 
     def __str__(self):
         return self.indicator_name
 
-class GeneralPlan(models.Model): 
-    date_from = models.DateTimeField(default=timezone.now())
-    date_to = models.DateTimeField()
+class GeneralPlan(models.Model):
 
     KPI = models.ForeignKey(KPI, related_name='generals_plans' , on_delete=models.CASCADE)
 
@@ -60,10 +60,10 @@ class GeneralPlan(models.Model):
 class BankOfficePlan(models.Model):
     general_plan = models.ForeignKey(GeneralPlan, related_name='bankoffice_plans', on_delete=models.CASCADE)
     bankoffice = models.ForeignKey(BankOffice, related_name='bankoffice_plans', on_delete=models.CASCADE)
-    KPI = models.ForeignKey(KPI, related_name='bankoffice_plans' , on_delete=models.CASCADE, blank=True, null=True) 
+    KPI = models.ForeignKey(KPI, related_name='bankoffice_plans' , on_delete=models.CASCADE, blank=True, null=True)
     amount =  models.DecimalField(
-        default=0, 
-        max_digits=8, 
+        default=0,
+        max_digits=8,
         decimal_places=2,
         validators=[
         MinValueValidator(0)
@@ -75,13 +75,40 @@ class BankOfficePlan(models.Model):
 class ManagerPlan(models.Model):
     general_plan = models.ForeignKey(GeneralPlan, related_name='manager_plans', on_delete=models.CASCADE)
     user = models.ForeignKey(User,  related_name='manager_plans', on_delete=models.CASCADE)
-    KPI = models.ForeignKey(KPI, related_name='manager_plans' , on_delete=models.CASCADE, blank=True, null=True) 
+    KPI = models.ForeignKey(KPI, related_name='manager_plans' , on_delete=models.CASCADE, blank=True, null=True)
     amount =  models.DecimalField(
-        default=0, 
-        max_digits=8, 
+        default=0,
+        max_digits=8,
         decimal_places=2,
         validators=[
         MinValueValidator(0)
         ])
     def __str__(self):
         return f"{self.KPI.__str__()} | {self.user.__str__()} - {self.amount} | {self.general_plan.__str__()}"
+
+class BankOfficeKPI(models.Model):
+    bankoffice = models.ForeignKey(BankOffice, related_name='bankoffice_kpis', on_delete=models.CASCADE)
+    KPI = models.ForeignKey(KPI, related_name='bankoffice_kpis' , on_delete=models.CASCADE, blank=True, null=True)
+    amount =  models.DecimalField(
+        default=0,
+        max_digits=8,
+        decimal_places=2,
+        validators=[
+        MinValueValidator(0)
+        ])
+
+    def __str__(self):
+        return f"{self.KPI.__str__()} | {self.bankoffice.__str__()} - {self.amount}"
+
+class ManagerKPI(models.Model):
+    user = models.ForeignKey(User,  related_name='manager_kpis', on_delete=models.CASCADE)
+    KPI = models.ForeignKey(KPI, related_name='manager_kpis' , on_delete=models.CASCADE, blank=True, null=True)
+    amount =  models.DecimalField(
+        default=0,
+        max_digits=8,
+        decimal_places=2,
+        validators=[
+        MinValueValidator(0)
+        ])
+    def __str__(self):
+        return f"{self.KPI.__str__()} | {self.user.__str__()} - {self.amount}"
