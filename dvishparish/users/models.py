@@ -20,9 +20,7 @@ class BankOffice(models.Model):
 class User(AbstractUser):
     """Default user for dvishparish."""
 
-    #: First and last name do not cover name patterns around the globe
-    name = models.CharField(_("Name of User"), blank=True, max_length=255)
-    bankoffice =  models.ForeignKey(BankOffice, related_name='users', on_delete=models.CASCADE, null=True, blank=True) 
+    bankoffice =  models.ForeignKey(BankOffice, related_name='users', on_delete=models.CASCADE, null=True, blank=True)
     salary = models.DecimalField( default=0, max_digits=8, decimal_places=2, null=True)
 
     def get_groups_display(self):

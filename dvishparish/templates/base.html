@@ -1,4 +1,4 @@
-{% load static i18n compress%}<!DOCTYPE html>
+{% load static i18n %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -20,12 +20,10 @@
 
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
     <!-- This file stores project-specific CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/material-kit.min.css' %}">    
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
-    {% endcompress %}
+
     {% endblock %}
 
   </head>
@@ -50,7 +48,7 @@
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+                <a class="nav-link" href="">{% trans "My Profile" %}</a>
               </li>
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
@@ -106,10 +104,8 @@
       
 
       <!-- place project specific Javascript in this file -->
-      {% compress js %}
       <link rel="stylesheet" type="text/css" href="{% static 'js/material-kit.min.js' %}">    
       <script src="{% static 'js/project.js' %}"></script>
-      {% endcompress %}
 
     {% endblock javascript %}
   </body>

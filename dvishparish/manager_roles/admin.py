@@ -1,10 +1,17 @@
 from django.contrib import admin
 
-from .models import ResultDaily
+from .models import ResultDaily, ResultItem
+
+
+class ResultItemInline(admin.TabularInline):
+    model = ResultItem
+    extra = 1
 
 
 @admin.register(ResultDaily)
 class ResultDailyAdmin(admin.ModelAdmin):
-    list_display = ["user", "KPI", "KPl_result_amount", "date_add", "date_update"]
-
-    list_filter = ['KPI', "date_add"]
+    list_display = ["user", "date_add", "date_update"]
+    list_filter = ["date_add"]
+    inlines = [
+        ResultItemInline,
+    ]

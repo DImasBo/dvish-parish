@@ -3,7 +3,7 @@
 # DJANGO_READ_DOT_ENV_FILE=True
 DJANGO_SETTINGS_MODULE=config.settings.production
 DJANGO_SECRET_KEY=VlN8UpEXo3CCKibTBISitdTSzOcPhGI88AeWA7WqJVAADBYAZMuzCdvfU5ij8141
-DJANGO_ADMIN_URL=sOyG1rwlD4b67Raj0ArqYUrEBn2b9YMa/
+DJANGO_ADMIN_URL=admin/
 DJANGO_ALLOWED_HOSTS=.example.com
 
 # Security
@@ -18,7 +18,6 @@ DJANGO_SERVER_EMAIL=
 
 # GCP
 # ------------------------------------------------------------------------------
-DJANGO_GCP_STORAGE_BUCKET_NAME=
 
 # django-allauth
 # ------------------------------------------------------------------------------

@@ -36,7 +36,7 @@ class BankOfficeAdmin(admin.ModelAdmin):
 class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
     form = UserChangeForm
     add_form = UserCreationForm
-    fieldsets = (("User", {"fields": ("name", "salary", "bankoffice")}),) + tuple(
+    fieldsets = (("User", {"fields": ("salary", "bankoffice")}),) + tuple(
         auth_admin.UserAdmin.fieldsets
     )
     actions = [
@@ -44,6 +44,6 @@ class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
     ]
     add_fieldsets =((None, {'classes': ('wide',), 
             'fields': ('username', 'password1', 'password2')}),)
-    list_display = ["username", "name", "is_superuser", "is_staff"]
-    search_fields = ["name"]
+    list_display = ["username", "is_superuser", "is_staff"]
+    search_fields = ["username"]
     list_filter = ['groups']
