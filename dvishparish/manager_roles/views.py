@@ -14,7 +14,7 @@ class IndexManagerView(HasRoleMixin, LoginRequiredMixin, TemplateView):
 
 class ManagerKPIsView(HasRoleMixin, LoginRequiredMixin, ListView):
     """Render Dashboard page."""
-    template_name = "roles/manager/self_plans.html"
+    template_name = "roles/manager/KPIs.html"
     allowed_roles = 'manager'
     model = ManagerKPI
     paginate_by = 30

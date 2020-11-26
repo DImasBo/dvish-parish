@@ -5,7 +5,7 @@ from .models import ResultDaily, ResultItem
 
 class ResultItemInline(admin.TabularInline):
     model = ResultItem
-    extra = 1
+    extra = 0
 
 
 @admin.register(ResultDaily)

@@ -5,7 +5,6 @@ class Finance(AbstractUserRole):
     available_permissions = {
         'plans.add_generalplan': True,
         'plans.change_generalplan': True,
-        'plans.view_generalplan': True,
 
         'plans.add_kpiitem': True,
         'plans.change_kpiitem': True,
