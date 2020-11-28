@@ -1,0 +1,20 @@
+[
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "date_add": "2020-11-26T01:01:53Z",
+    "date_update": "2020-11-27T16:59:35.615Z"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 1,
+  "fields": {
+    "result_daily": 1,
+    "KPI": 1,
+    "KPI_result_amount": "10.00"
+  }
+}
+]
