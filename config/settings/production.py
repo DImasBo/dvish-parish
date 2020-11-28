@@ -54,15 +54,12 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
     "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True
 )
 
-# STORAGES
+# STATIC
+# ------------------------
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# MEDIA
 # ------------------------------------------------------------------------------
 
-# ------------------------
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# STATIC_HOST =
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
@@ -80,13 +77,13 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
 DEFAULT_FROM_EMAIL = env(
-    "DJANGO_DEFAULT_FROM_EMAIL", default="dvishparish <noreply@ca-motivation.ga>"
+    "DJANGO_DEFAULT_FROM_EMAIL", default="dvish-parish <noreply@ca-motivation.ga>"
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
 EMAIL_SUBJECT_PREFIX = env(
-    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[dvishparish]"
+    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[dvish-parish]"
 )
 
 # ADMIN
@@ -104,22 +101,7 @@ INSTALLED_APPS += ["anymail"]  # noqa F405
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 ANYMAIL = {}
 
-# django-compressor
-# ------------------------------------------------------------------------------
-# https://django-compressor.readthedocs.io/en/latest/settings/#django.conf.settings.COMPRESS_ENABLED
-# COMPRESS_ENABLED = env.bool("COMPRESS_ENABLED", default=True)
-# # https://django-compressor.readthedocs.io/en/latest/settings/#django.conf.settings.COMPRESS_STORAGE
-# COMPRESS_STORAGE = STATICFILES_STORAGE
-# # https://django-compressor.readthedocs.io/en/latest/settings/#django.conf.settings.COMPRESS_URL
-# COMPRESS_URL = STATIC_URL
-# # https://django-compressor.readthedocs.io/en/latest/settings/#django.conf.settings.COMPRESS_FILTERS
-# COMPRESS_FILTERS = {
-#     "css": [
-#         "compressor.filters.css_default.CssAbsoluteFilter",
-#         "compressor.filters.cssmin.rCSSMinFilter",
-#     ],
-#     "js": ["compressor.filters.jsmin.JSMinFilter"],
-#}
+
 # LOGGING
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#logging
@@ -164,6 +146,6 @@ LOGGING = {
         },
     },
 }
-# DEBUG=True
+
 # Your stuff...
 # ------------------------------------------------------------------------------

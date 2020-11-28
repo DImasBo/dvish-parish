@@ -1,6 +1,5 @@
 from django import template
-from dvishparish.utils.result import get_sum_result_by_KPI_and_user
-from dvishparish.utils.plans import get_сurrent_manager_kpis
+from dvishparish.utils.manager import get_сurrent_manager_kpis, get_sum_result_by_KPI_and_user
 
 register = template.Library()
 
@@ -13,3 +12,4 @@ def tag_get_current_manager_plans(user):
 @register.simple_tag
 def get_sum_result_user_kpi(user, kpi):
 	return get_sum_result_by_KPI_and_user(user, kpi)
+

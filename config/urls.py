@@ -16,7 +16,7 @@ urlpatterns = [
     path("users/", include("dvishparish.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path("dashboard/", include("dvishparish.manager_roles.urls")),
-    # Your stuff: custom urls includes go here
+                  # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

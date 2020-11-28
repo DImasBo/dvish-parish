@@ -2,7 +2,7 @@ import pytest
 
 from django.test import TestCase
 from mixer.backend.django import mixer
-from dvishparish.utils.plans import get_сurrent_manager_kpis
+from dvishparish.utils.manager import get_сurrent_manager_kpis
 from dvishparish.utils.result import get_sum_result_by_KPI_and_user
 from django.utils import timezone
 from datetime import datetime, timedelta

@@ -46,11 +46,8 @@
     "salary": "0.00",
     "integration_id": null,
     "groups": [
-      1
     ],
     "user_permissions": [
-      122,
-      121
     ]
   }
 },
@@ -114,15 +111,8 @@
     "salary": "0.00",
     "integration_id": null,
     "groups": [
-      3
     ],
     "user_permissions": [
-      127,
-      125,
-      123,
-      124,
-      126,
-      128
     ]
   }
 },
@@ -144,17 +134,8 @@
     "salary": "0.00",
     "integration_id": null,
     "groups": [
-      4
     ],
     "user_permissions": [
-      130,
-      132,
-      131,
-      129,
-      122,
-      121,
-      126,
-      128
     ]
   }
 },

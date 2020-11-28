@@ -10,14 +10,11 @@ entryPoints:
     # https
     address: ":443"
 
-  flower:
-    address: ":5555"
-
 certificatesResolvers:
   letsencrypt:
     # https://docs.traefik.io/master/https/acme/#lets-encrypt
     acme:
-      email: "1@1.com"
+      email: "daniel-roy-greenfeld@example.com"
       storage: /etc/traefik/acme/acme.json
       # https://docs.traefik.io/master/https/acme/#httpchallenge
       httpChallenge:
@@ -47,15 +44,6 @@ http:
         # https://docs.traefik.io/master/routing/routers/#certresolver
         certResolver: letsencrypt
 
-    flower-secure-router:
-      rule: "Host(`ca-motivation.ga`)"
-      entryPoints:
-        - flower
-      service: flower
-      tls:
-        # https://docs.traefik.io/master/routing/routers/#certresolver
-        certResolver: letsencrypt
-
   middlewares:
     redirect:
       # https://docs.traefik.io/master/middlewares/redirectscheme/
@@ -73,11 +61,6 @@ http:
       loadBalancer:
         servers:
           - url: http://django:5000
-
-    flower:
-      loadBalancer:
-        servers:
-          - url: http://flower:5555
 
 providers:
   # https://docs.traefik.io/master/providers/file/
