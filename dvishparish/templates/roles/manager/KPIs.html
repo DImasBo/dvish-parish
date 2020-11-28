@@ -14,9 +14,9 @@
 	    <tbody>
 	    	{% for plan in object_list %}
 	        <tr>
-	            <td class="text-center">{{plan.KPI}}</td>
+	            <td class="text-center">{{plan.KPI.indicator_name }}</td>
 	            <td>{{plan.amount}}</td>
-	            <td>{{plan.KPI.date_from}} - {{plan.KPI.date_to}} </td>
+	            <td>{{plan.KPI.date_from|date:"d b Y"}} - {{plan.KPI.date_to|date:"d b Y"}} </td>
 	        </tr>
 	        {% endfor %}
 	    </tbody>

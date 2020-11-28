@@ -7,7 +7,7 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-6">
 
       <h2>{{ object.username }}</h2>
       {% if object.name %}
@@ -16,6 +16,10 @@
         <p>Ролі: {{object.get_groups_display}}</p>
         <p>Ваш Банк офіс: {{ object.bankoffice }}</p>
     </div>
+    <div class="col-md-3">
+
+    {% include "roles/manager/includes/currens_KPIs.html" %}
+  </div>
   </div>
 
 {% if object == request.user %}
@@ -31,7 +35,46 @@
 </div>
 <!-- End Action buttons -->
 {% endif %}
-
+<div class="row">
+    <div class="col-md-6">
+        <h3>Ваші Премії</h3>
+        <table class="table table-striped bg-white">
+	    <thead>
+	        <tr>
+	            <th>Сума</th>
+	            <th>Дата</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for premium in user.premiums.all %}
+	        <tr>
+	            <td>{{premium.amount}}</td>
+                <td class="text-center">{{premium.date }}</td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+    </div>
+    <div class="col-md-6">
+        <h3>Ваші Бонуси</h3>
+        <table class="table table-striped bg-white">
+	    <thead>
+	        <tr>
+	            <th>Сума</th>
+	            <th>Дата</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for bonus in user.Bonus.all %}
+	        <tr>
+	            <td>{{bonus.amount}}</td>
+                <td class="text-center">{{bonus.date }}</td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+    </div>
+</div>
 
 </div>
 {% endblock content %}
