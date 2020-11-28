@@ -3,8 +3,47 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-md-6 offset-md-3">
-    {% block inner %}teste{% endblock %}
+    <div class="col-md-3">
+
+    {% include "roles/manager/includes/currens_KPIs.html" %}
+  </div>
+
+{% comment %}
+  <div class="col-md-9 text-light"  style="background-color: #9c27b0!important">
+      <h4>Ваші поточні цілі</h4>
+      <h6>На сьогодні:</h6>
+      <ul>
+        <li></li>
+      </ul>
+      <h6>Постояні</h6>
+      <ol>
+        <li>
+          Завершити персональний план
+          <ul>
+            {% for plan in user|current_manager_plans %}
+              <li>
+              {{plan.KPI}} - {{plan.amount}}
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li>
+          Завершити спільний план депортамента ({{user.bankoffice}})<br>
+          <ul>
+            {% for plan in user|current_bankoffice_plans %}
+            <li>{{plan.KPI}} - {{plan.amount}}</li>
+            {% endfor %}
+          </ul>
+
+        </li>
+      </ol>
+
+
+  </div>
+{% endcomment %}
+  <div class="col-md-9">
+    {% block inner %}
+    {% endblock %}
   </div>
 </div>
 {% endblock %}

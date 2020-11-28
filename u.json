@@ -1,0 +1,206 @@
+[
+{
+  "model": "users.bankoffice",
+  "pk": 122,
+  "fields": {
+    "city": "\u041a\u0438\u0457\u0432",
+    "address": "\u0432\u0443\u043b \u0442\u0442\u0435\u0441\u0442 12"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$SG1SUG93eGoyRFAw$XThItoVK4n5cNisgXx9rFw",
+    "last_login": "2020-11-27T21:03:12.217Z",
+    "is_superuser": true,
+    "username": "mouse",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-25T23:15:54.509Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$QnMxZXZuWkVKYzdu$89AjgCA/hxIhvBxNY1xt7A",
+    "last_login": "2020-11-28T15:26:35.517Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "manager",
+    "last_name": "manager",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-25T23:40:06Z",
+    "bankoffice": 122,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      122,
+      121
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "test1212",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "finance",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:14:48Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "tetst",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:16:52.969Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "test",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hr",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:17:39.953Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [
+      127,
+      125,
+      123,
+      124,
+      126,
+      128
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "test",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "businesses",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:17:40.016Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      4
+    ],
+    "user_permissions": [
+      130,
+      132,
+      131,
+      129,
+      122,
+      121,
+      126,
+      128
+    ]
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 1,
+  "fields": {
+    "amount": "150.00",
+    "date": "2020-11-28T15:09:04Z",
+    "user": 2
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 2,
+  "fields": {
+    "amount": "500.00",
+    "date": "2020-10-30T15:09:04Z",
+    "user": 2
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 3,
+  "fields": {
+    "amount": "200.00",
+    "date": "2020-09-28T14:09:04Z",
+    "user": 2
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 1,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-11-25T15:09:04Z",
+    "user": 2
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 2,
+  "fields": {
+    "amount": "30.00",
+    "date": "2020-11-24T15:09:04Z",
+    "user": 2
+  }
+}
+]

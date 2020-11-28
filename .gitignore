@@ -3,8 +3,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
 
 # Distribution / packaging
@@ -279,4 +277,7 @@ dvishparish/media/
 
 !.envs/.local/
 
+<<<<<<< HEAD
+=======
 .idea
+>>>>>>> master

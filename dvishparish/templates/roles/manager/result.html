@@ -1,0 +1,25 @@
+{% extends "roles/manager/index.html" %}
+
+{% block inner %}
+<div class="container mt-2 ">
+	<h3>Ваші результати</h3>
+	<table class="table bg-white">
+	    <thead>
+	        <tr>
+	            <th>KPI</th>
+	            <th>Результа</th>
+	            <th>День</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for result in object_list %}
+	        <tr>
+	            <td class="text-center">{{result.KPI}}</td>
+	            <td>{{result.KPI_result_amount}}</td>
+	            <td>{{result.date_add}} </td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+</div>
+{% endblock %}

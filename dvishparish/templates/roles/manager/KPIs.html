@@ -1,0 +1,25 @@
+{% extends "roles/manager/index.html" %}
+
+{% block inner %}
+<div class="container">
+	<h3>Ваші квести</h3>
+	<table class="table table-striped bg-white">
+	    <thead>
+	        <tr>
+	            <th>Назва</th>
+	            <th>Ціль</th>
+	            <th>Період</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for plan in object_list %}
+	        <tr>
+	            <td class="text-center">{{plan.KPI.indicator_name }}</td>
+	            <td>{{plan.amount}}</td>
+	            <td>{{plan.KPI.date_from|date:"d b Y"}} - {{plan.KPI.date_to|date:"d b Y"}} </td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+</div>
+{% endblock %}
