@@ -11,23 +11,30 @@ from rolepermissions.roles import assign_role
 
 User = get_user_model()
 
+
 def update_roles(queryset, name_roles):
     queryset.update(is_staff=True)
     for user in queryset:
         assign_role(user, name_roles)
 
+
 def make_user_manager(modeladmin, request, queryset):
     update_roles(queryset, "manager")
 
+
 make_user_manager.short_description = "назначити менеджером"
+
 
 def make_user_finance(modeladmin, request, queryset):
     update_roles(queryset, "finance")
 
+
 make_user_finance.short_description = "назначити Фінансом віділлення"
+
 
 def make_user_businesses(modeladmin, request, queryset):
     update_roles(queryset, "businesses")
+
 
 make_user_businesses.short_description = "назначити в Бізнес депортамне"
 
@@ -35,7 +42,9 @@ make_user_businesses.short_description = "назначити в Бізнес д�
 def make_user_hr(modeladmin, request, queryset):
     update_roles(queryset, "hr")
 
+
 make_user_hr.short_description = "назначити HR"
+
 
 class UserInline(admin.TabularInline):
     model = User
@@ -85,13 +94,27 @@ class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
         BonusInline
     ]
 
+
+def make_approved(modeladmin, request, queryset):
+    queryset.update(status="approved")
+
+
+make_approved.short_description = "Підтвердити нарахування"
+
+
 @admin.register(Premium)
 class PremiusAdminModel(admin.ModelAdmin):
-    list_display = ['user', "amount", "date"]
+    list_display = ['user', "amount", "date", "status"]
     list_filter = ['date']
+    actions = [
+        make_approved
+    ]
+
 
 @admin.register(Bonus)
 class BonusAdminModel(admin.ModelAdmin):
-    list_display = ['user', "amount", "date"]
+    list_display = ['user', "amount", "date", "status"]
     list_filter = ['date']
-
+    actions = [
+        make_approved
+    ]

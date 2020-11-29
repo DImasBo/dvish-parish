@@ -37,6 +37,10 @@ class User(AbstractUser):
 class AbstractPremia(models.Model):
     amount = models.DecimalField(default=0, max_digits=8, decimal_places=2)
     date = models.DateTimeField(default=timezone.now())
+    status = models.CharField(choices=(
+        ("approved", "approved"),
+        ("process", 'process')),
+        max_length=20, default="process")
 
     def __str__(self):
         return f"{self.user.__str__()} - {self.amount}UAH {self.date.strftime('%m/%d/%Y')}"
