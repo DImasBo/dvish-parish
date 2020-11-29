@@ -6,5 +6,5 @@ app_name = "manager_roles"
 
 urlpatterns = [
     path(r"KPIs/", views.ManagerKPIsView.as_view(), name="self_kpis"),
-    path(r"calculators/", views.ManagerKPIsView.as_view(), name="self_calculators"),
+    path(r"top5/", views.Top5ManagersView.as_view(), name="top_managers"),
 ]

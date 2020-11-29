@@ -4,6 +4,9 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from dvishparish.users.views import ListPremiumsAPI
+
+
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -17,9 +20,9 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("dashboard/", include("dvishparish.manager_roles.urls")),
                   # Your stuff: custom urls includes go here
+    path("api/premius/", ListPremiumsAPI.as_view()),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.

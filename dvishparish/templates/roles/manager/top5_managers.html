@@ -1,0 +1,33 @@
+{% extends "roles/manager/index.html" %}
+
+{% block inner %}
+
+<div class="container">
+	<h3>Рейтинг найкращих менеджерів</h3>
+    <table class="table table-striped bg-white">
+	    <thead>
+	        <tr>
+                <th>Номер</th>
+                <th>Користувач</th>
+	            <th>Рейтинг</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for top in tops %}
+	        <tr>
+	            <td class="text-center">
+                    {% if top.number %}
+                        твоє місце
+                        {{ top.number }}
+                    {% else %}
+                        {{ forloop.counter }}
+                    {% endif %}
+                </td>
+	            <td>{{top.user}}</td>
+	            <td>{{ top.sum_kpis }} </td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+</div>
+{% endblock %}

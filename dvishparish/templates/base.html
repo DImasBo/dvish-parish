@@ -51,11 +51,13 @@
                 <a class="nav-link" href="{{ user.get_absolute_url }}">{% trans "Мій профіль" %}</a>
               </li>
               <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Вийти" %}</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="{% url 'manager_roles:self_kpis' %}">{% trans "Ваші квести" %}</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'manager_roles:top_managers' %}">{% trans "Рейтинг" %}</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Вийти" %}</a>
               </li>
 
             {% else %}

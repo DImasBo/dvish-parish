@@ -58,10 +58,10 @@ class GeneralPlan(models.Model):
     date_to = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.KPI.__str__()}"
+        return f"{self.date_from} - {self.date_to}"
 
 
-class KPIitems(models.Model):
+class KPIitem(models.Model):
     KPI = models.ForeignKey(KPI, related_name='kpi_items', on_delete=models.CASCADE)
     general_plan = models.ForeignKey(GeneralPlan, related_name="kpi_items", on_delete=models.CASCADE)
 

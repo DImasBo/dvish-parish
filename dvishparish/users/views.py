@@ -15,6 +15,7 @@ class UserDetailView(LoginRequiredMixin, DetailView):
         return self.request.user
 
 
+user_detail_view = UserDetailView.as_view()
 class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     model = User
@@ -45,3 +46,18 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+from rest_framework.generics import ListAPIView
+from .models import Premium
+from rest_framework import serializers
+
+
+class PremiaSerializer(serializers.Serializer):
+    user_id = serializers.IntegerField(read_only=True)
+    amount = serializers.IntegerField()
+    date = serializers.DateTimeField()
+
+class ListPremiumsAPI(ListAPIView):
+    queryset = Premium.objects.all()
+    serializer_class = PremiaSerializer

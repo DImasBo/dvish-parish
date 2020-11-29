@@ -1,11 +1,11 @@
 from django.contrib import admin
 
 from .forms import KPIForm
-from .models import KPI, Formula, GeneralPlan, KPIitems, ManagerKPI, BankOfficeKPI
+from .models import KPI, Formula, GeneralPlan, KPIitem, ManagerKPI, BankOfficeKPI
 
 
 class KPIitemsInline(admin.TabularInline):
-    model = KPIitems
+    model = KPIitem
     extra = 1
 
 

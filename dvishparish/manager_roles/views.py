@@ -1,15 +1,9 @@
 from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rolepermissions.mixins import HasRoleMixin
-
-from dvishparish.plans.models import ManagerKPI, BankOfficePlan
+from dvishparish.utils.manager import get_top_5_menegers_with_general_plan
+from dvishparish.plans.models import ManagerKPI
 from .models import ResultDaily
-
-
-class IndexManagerView(HasRoleMixin, LoginRequiredMixin, TemplateView):
-    """Render Dashboard page."""
-    template_name = "roles/manager/index.html"
-    allowed_roles = 'manager'
 
 
 class ManagerKPIsView(HasRoleMixin, LoginRequiredMixin, ListView):
@@ -30,13 +24,13 @@ class ResultDailyView(HasRoleMixin, LoginRequiredMixin, ListView):
     allowed_roles = 'manager'
 
 
-class BankOfficePlansView(HasRoleMixin, LoginRequiredMixin, ListView):
+class Top5ManagersView(HasRoleMixin, LoginRequiredMixin, TemplateView):
     """Render Dashboard page."""
-    template_name = "roles/manager/bankoffice_plans.html"
+    template_name = "roles/manager/top5_managers.html"
     allowed_roles = 'manager'
-    model = BankOfficePlan
-    paginate_by = 30
 
-    def get_queryset(self):
-        return self.model.objects.filter(
-            bankoffice=self.request.user.bankoffice)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tops'] = get_top_5_menegers_with_general_plan(self.request.user)
+        print(context)
+        return context
