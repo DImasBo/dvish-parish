@@ -49,24 +49,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Головна <span class="sr-only">(current)</span></a>
+              <a class="nav-link"  {% if request.path == "/" %}style="background-color: #4dd0e1"{% endif %}  href="{% url 'home' %}">Головна <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">Про нас</a>
+              <a class="nav-link"  {% if request.path == "/about/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'about' %}">Про нас</a>
             </li>
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{{ user.get_absolute_url }}">{% trans "Мій профіль" %}</a>
+                <a class="nav-link" {% if request.path == "/users/" %}style="background-color: #4dd0e1"{% endif %} href="{{ user.get_absolute_url }}">{% trans "Мій профіль" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'manager_roles:self_kpis' %}">{% trans "Ваші квести" %}</a>
+                <a class="nav-link"  {% if request.path == "/dashboard/KPIs/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'manager_roles:self_kpis' %}">{% trans "Ваші квести" %}</a>
               </li>
                 <li class="nav-item">
-                <a class="nav-link" href="{% url 'manager_roles:top_managers' %}">{% trans "Рейтинг" %}</a>
+                <a class="nav-link"  {% if request.path == "/dashboard/top5/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'manager_roles:top_managers' %}">{% trans "Рейтинг" %}</a>
               </li>
                 <li class="nav-item">
-                <a class="nav-link" href="{% url 'manager_roles:list_kips' %}">{% trans "Квести і нагороди" %}</a>
+                <a class="nav-link" {% if request.path == "/dashboard/kpis_list/" %}style="background-color: #4dd0e1"{% endif %}  href="{% url 'manager_roles:list_kips' %}">{% trans "Квести і нагороди" %}</a>
               </li>
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Вийти" %}</a>

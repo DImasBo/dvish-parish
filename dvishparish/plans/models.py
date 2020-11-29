@@ -32,7 +32,7 @@ class Formula(models.Model):
 class KPI(models.Model):
     is_general_plan = models.BooleanField(default=False)
     indicator_name = models.CharField(max_length=150)
-    formula = models.ForeignKey(Formula, related_name='KPIs', on_delete=models.CASCADE, null=True, blank=True)
+    formula = models.ForeignKey(Formula, related_name='KPIs', on_delete=models.CASCADE,null=True, blank=True)
     formula_bankoffice = models.ForeignKey(Formula, related_name='KPIs_b', on_delete=models.CASCADE, null=True, blank=True)
 
     target_amount = models.DecimalField(
