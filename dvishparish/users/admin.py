@@ -85,6 +85,13 @@ class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
         BonusInline
     ]
 
+@admin.register(Premium)
+class PremiusAdminModel(admin.ModelAdmin):
+    list_display = ['user', "amount", "date"]
+    list_filter = ['date']
 
-admin.site.register(Premium)
-admin.site.register(Bonus)
+@admin.register(Bonus)
+class BonusAdminModel(admin.ModelAdmin):
+    list_display = ['user', "amount", "date"]
+    list_filter = ['date']
+
