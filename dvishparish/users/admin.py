@@ -105,7 +105,7 @@ make_approved.short_description = "Підтвердити нарахування
 @admin.register(Premium)
 class PremiusAdminModel(admin.ModelAdmin):
     list_display = ['user', "amount", "date", "status"]
-    list_filter = ['date']
+    list_filter = ['date', "status"]
     actions = [
         make_approved
     ]
@@ -114,7 +114,7 @@ class PremiusAdminModel(admin.ModelAdmin):
 @admin.register(Bonus)
 class BonusAdminModel(admin.ModelAdmin):
     list_display = ['user', "amount", "date", "status"]
-    list_filter = ['date']
+    list_filter = ['date', "status"]
     actions = [
         make_approved
     ]
