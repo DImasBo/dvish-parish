@@ -66,7 +66,7 @@ class ListPremiumsAPI(ListAPIView):
     serializer_class = PremiaSerializer
 
 
-class DevApi(APIView):
+class DevApiView(APIView):
 
 
     def get(self, request, format=None):

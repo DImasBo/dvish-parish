@@ -4,9 +4,16 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
-from dvishparish.users.views import ListPremiumsAPI, DevApi
+from dvishparish.users.views import ListPremiumsAPI, DevApiView
 
+from rest_framework import routers
 
+# router = routers.DefaultRouter()
+# router.register(r'premius', ListPremiumsAPI)
+# router.register(r'bonus', DevApiView)
+# router.register(r'result', DevApiView)
+# router.register(r'users', DevApiView)
+# router.register(r'users/add/', DevApiView)
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -20,11 +27,14 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("dashboard/", include("dvishparish.manager_roles.urls")),
                   # Your stuff: custom urls includes go here
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('api/', include(router.urls)),
+
     path("api/premius/", ListPremiumsAPI.as_view(), "get_premius"),
-    path("api/bonus/", DevApi.as_view(), "get_bonus"),
-    path("api/result/", DevApi.as_view(), "add_result_manager"),
-    path("api/users/", DevApi.as_view(), "list_user"),
-    path("api/users/add/", DevApi.as_view(), "add_user"),
+    # path("api/bonus/", DevApiView.as_view(), "get_bonus"),
+    # path("api/result/", DevApiView.as_view(), "add_result_manager"),
+    # path("api/users/", DevApiView.as_view(), "list_user"),
+    # path("api/users/add/", DevApiView.as_view(), "add_user"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

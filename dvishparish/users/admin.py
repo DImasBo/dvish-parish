@@ -11,7 +11,7 @@ from rolepermissions.roles import assign_role
 
 User = get_user_model()
 
-def update_roles(qs, name_roles):
+def update_roles(queryset, name_roles):
     queryset.update(is_staff=True)
     for user in queryset:
         assign_role(user, name_roles)
@@ -24,18 +24,18 @@ make_user_manager.short_description = "назначити менеджером"
 def make_user_finance(modeladmin, request, queryset):
     update_roles(queryset, "finance")
 
-make_user_manager.short_description = "назначити Фінансом віділлення"
+make_user_finance.short_description = "назначити Фінансом віділлення"
 
 def make_user_businesses(modeladmin, request, queryset):
     update_roles(queryset, "businesses")
 
-make_user_manager.short_description = "назначити в Бізнес депортамне"
+make_user_businesses.short_description = "назначити в Бізнес депортамне"
 
 
 def make_user_hr(modeladmin, request, queryset):
-    update_roles(queryset, "HR")
+    update_roles(queryset, "hr")
 
-make_user_manager.short_description = "назначити HR"
+make_user_hr.short_description = "назначити HR"
 
 class UserInline(admin.TabularInline):
     model = User
