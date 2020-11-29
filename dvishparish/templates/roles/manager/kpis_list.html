@@ -1,0 +1,38 @@
+{% extends "roles/manager/index.html" %}
+{% load manager %}
+{% block inner %}
+<div class="container">
+	<h3>Ваші квести</h3>
+	<table class="table table-striped bg-white">
+	    <thead>
+	        <tr>
+	            <th>Назва</th>
+	            <th>Ціль</th>
+                <th>формула індивідуальна / формула на відділення </th>
+	            <th>Період</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	{% for m_kpi in object_list %}
+	        <tr>
+	            <td class="text-center">{{m_kpi.KPI.indicator_name }}
+                </td>
+	            <td>
+
+                {% get_sum_result_user_kpi user m_kpi.KPI as result_KPI %}
+                    {{ result_KPI }} / {{ m_kpi.amount }}
+
+                <td><ul>
+                    <li>
+                {{ m_kpi.KPI.formula }}
+                    </li>
+                    <li>
+                    {{ m_kpi.KPI.formula_bankoffice }}</li>
+                </ul></td>
+	            <td>{{m_kpi.KPI.date_from|date:"d b Y"}} - {{m_kpi.KPI.date_to|date:"d b Y"}} </td>
+	        </tr>
+	        {% endfor %}
+	    </tbody>
+	</table>
+</div>
+{% endblock %}

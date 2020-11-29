@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rolepermissions.mixins import HasRoleMixin
 from dvishparish.utils.manager import get_top_5_menegers_with_general_plan
-from dvishparish.plans.models import ManagerKPI
+from dvishparish.plans.models import ManagerKPI, KPI
 from .models import ResultDaily
 
 
@@ -34,3 +34,12 @@ class Top5ManagersView(HasRoleMixin, LoginRequiredMixin, TemplateView):
         context['tops'] = get_top_5_menegers_with_general_plan(self.request.user)
         print(context)
         return context
+
+
+class ListKPIView(HasRoleMixin, LoginRequiredMixin, ListView):
+    model = ManagerKPI
+    allowed_roles = 'manager'
+    template_name = "roles/manager/kpis_list.html"
+
+    def get_queryset(self):
+        return self.model.objects.filter(user=self.request.user)

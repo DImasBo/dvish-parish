@@ -26,7 +26,7 @@ class Formula(models.Model):
     is_bankoffice = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.name} - {self.percentage_on_salary} {self.percentage_of_the_plan}"
+        return f"{self.name} - Відсоток премії {self.percentage_on_salary}%. Виконати план на {self.percentage_of_the_plan}%"
 
 
 class KPI(models.Model):
