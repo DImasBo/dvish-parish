@@ -11,15 +11,31 @@ from rolepermissions.roles import assign_role
 
 User = get_user_model()
 
-
-def make_user_manager(modeladmin, request, queryset):
+def update_roles(qs, name_roles):
     queryset.update(is_staff=True)
     for user in queryset:
-        assign_role(user, 'manager')
+        assign_role(user, name_roles)
 
+def make_user_manager(modeladmin, request, queryset):
+    update_roles(queryset, "manager")
 
 make_user_manager.short_description = "назначити менеджером"
 
+def make_user_finance(modeladmin, request, queryset):
+    update_roles(queryset, "finance")
+
+make_user_manager.short_description = "назначити Фінансом віділлення"
+
+def make_user_businesses(modeladmin, request, queryset):
+    update_roles(queryset, "businesses")
+
+make_user_manager.short_description = "назначити в Бізнес депортамне"
+
+
+def make_user_hr(modeladmin, request, queryset):
+    update_roles(queryset, "HR")
+
+make_user_manager.short_description = "назначити HR"
 
 class UserInline(admin.TabularInline):
     model = User
@@ -55,6 +71,9 @@ class UserAdmin(auth_admin.UserAdmin, RolePermissionsUserAdminMixin):
     )
     actions = [
         make_user_manager,
+        make_user_hr,
+        make_user_finance,
+        make_user_businesses
     ]
     add_fieldsets = ((None, {'classes': ('wide',),
                              'fields': ('username', 'password1', 'password2')}),)

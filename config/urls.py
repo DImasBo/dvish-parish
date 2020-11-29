@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
-from dvishparish.users.views import ListPremiumsAPI
+from dvishparish.users.views import ListPremiumsAPI, DevApi
 
 
 
@@ -20,7 +20,11 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("dashboard/", include("dvishparish.manager_roles.urls")),
                   # Your stuff: custom urls includes go here
-    path("api/premius/", ListPremiumsAPI.as_view()),
+    path("api/premius/", ListPremiumsAPI.as_view(), "get_premius"),
+    path("api/bonus/", DevApi.as_view(), "get_bonus"),
+    path("api/result/", DevApi.as_view(), "add_result_manager"),
+    path("api/users/", DevApi.as_view(), "list_user"),
+    path("api/users/add/", DevApi.as_view(), "add_user"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

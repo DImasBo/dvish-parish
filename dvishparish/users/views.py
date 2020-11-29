@@ -48,16 +48,27 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 user_redirect_view = UserRedirectView.as_view()
 
 
+from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView
 from .models import Premium
 from rest_framework import serializers
+from rest_framework.response import Response
 
 
 class PremiaSerializer(serializers.Serializer):
-    user_id = serializers.IntegerField(read_only=True)
+    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.filter(groups__name="manager"))
     amount = serializers.IntegerField()
     date = serializers.DateTimeField()
+
 
 class ListPremiumsAPI(ListAPIView):
     queryset = Premium.objects.all()
     serializer_class = PremiaSerializer
+
+
+class DevApi(APIView):
+
+
+    def get(self, request, format=None):
+        print("test",request)
+        return Response({"detail": "This request is under development"})
