@@ -56,7 +56,10 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 
 # STATIC
 # ------------------------
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = "django.contrib.staticfiles.storage.CachedStaticFilesStorage"
+#STATICFILES_STORAGE = "django.contrib.staticfiles.storage.CachedStaticFilesStorage"
 # MEDIA
 # ------------------------------------------------------------------------------
 
