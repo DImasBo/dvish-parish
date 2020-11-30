@@ -32,8 +32,8 @@ class Formula(models.Model):
 class KPI(models.Model):
     is_general_plan = models.BooleanField(default=False)
     indicator_name = models.CharField(max_length=150)
-    formula = models.ForeignKey(Formula, related_name='KPIs', on_delete=models.CASCADE,null=True, blank=True)
-    formula_bankoffice = models.ForeignKey(Formula, related_name='KPIs_b', on_delete=models.CASCADE, null=True, blank=True)
+    formula = models.ForeignKey(Formula, related_name='KPI_f', on_delete=models.CASCADE, null=True, blank=True)
+    formula_bankoffice = models.ForeignKey(Formula, related_name='KPI_fb', on_delete=models.CASCADE, null=True, blank=True)
 
     target_amount = models.DecimalField(
         default=0,
@@ -46,8 +46,8 @@ class KPI(models.Model):
     date_from = models.DateTimeField(default=timezone.now())
     date_to = models.DateTimeField()
     
-    class Meta:
-        unique_together = ("formula", "formula_bankoffice")
+    # class Meta:
+    #     unique_together = ("formula", "formula_bankoffice")
 
     def __str__(self):
         return f"{self.indicator_name} | {self.date_from} - {self.date_to} {self.target_amount}"
