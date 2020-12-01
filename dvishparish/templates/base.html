@@ -54,6 +54,10 @@
             <li class="nav-item">
               <a class="nav-link"  {% if request.path == "/about/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'about' %}">Про нас</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link"  {% if request.path == "/api/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'api_docs' %}">API</a>
+            </li>
+
             {% if request.user.is_authenticated %}
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}

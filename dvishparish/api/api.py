@@ -14,7 +14,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ["url","id", "integration_id", 'username', 'email', "first_name" ,"last_name",]# "bankoffice", "results_daily"]
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = User.objects.filter(groups__name="manager")
     serializer_class = UserSerializer
 
 
