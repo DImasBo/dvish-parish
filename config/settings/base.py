@@ -81,6 +81,7 @@ LOCAL_APPS = [
     "dvishparish.users.apps.UsersConfig",
     "dvishparish.manager_roles.apps.ManagerRolesConfig",
     "dvishparish.plans.apps.PlansConfig",
+    "dvishparish.api.apps.APIConfig",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -274,6 +275,12 @@ ACCOUNT_ADAPTER = "dvishparish.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 # SOCIALACCOUNT_ADAPTER = "dvishparish.users.adapters.SocialAccountAdapter"
 
-
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 # Your stuff...
 # ------------------------------------------------------------------------------

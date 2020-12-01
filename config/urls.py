@@ -14,7 +14,7 @@ from rest_framework import routers
 # router.register(r'result', DevApiView)
 # router.register(r'users', DevApiView)
 # router.register(r'users/add/', DevApiView)
-
+from dvishparish.api import api
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
@@ -27,14 +27,10 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("dashboard/", include("dvishparish.manager_roles.urls")),
                   # Your stuff: custom urls includes go here
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
 
-    path("api/premius/", ListPremiumsAPI.as_view(), "get_premius"),
-    # path("api/bonus/", DevApiView.as_view(), "get_bonus"),
-    # path("api/result/", DevApiView.as_view(), "add_result_manager"),
-    # path("api/users/", DevApiView.as_view(), "list_user"),
-    # path("api/users/add/", DevApiView.as_view(), "add_user"),
+
+    path('api/', include(api.router.urls)),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
