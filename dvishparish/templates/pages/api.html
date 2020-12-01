@@ -3,24 +3,28 @@
 {% block content %}
     <div class="contaner bg-white p-4">
     <h3>Менеджери</h3>
-        Список менеджерів - <a href="{% url "user-list" %}">{% url "user-list" %}</a>
+        GET / Список менеджерів - <a href="{% url "user-list" %}">{% url "user-list" %}</a>
         <br>
-        менеджер детальніше- <a href="{% url "user-list" %}{id}/">"{% url "user-list" %}{id}/"</a>
+        GET / менеджер детальніше- <a href="{% url "user-list" %}{id}/">"{% url "user-list" %}{id}/"</a>
+        <br>
+        POST / Створити менеджера - <a href="{% url "user-list" %}{id}/">"{% url "user-list" %}"</a>
         <br>
     <h3>Премії</h3>
-        Список Премії - <a href="{% url "premium-list" %}">{% url "premium-list" %}</a>
+        GET / Список Премії - <a href="{% url "premium-list" %}">{% url "premium-list" %}</a>
         <br>
-        Премія детальніше- <a href="{% url "premium-list" %}{id}/">"{% url "premium-list" %}{id}/"</a>
+        GET / Премія детальніше- <a href="{% url "premium-list" %}{id}/">"{% url "premium-list" %}{id}/"</a>
         <br>
     <h3>Бонуси</h3>
-        Список бонусів - <a href="{% url "bonus-list" %}">{% url "bonus-list" %}</a>
+        GET / Список бонусів - <a href="{% url "bonus-list" %}">{% url "bonus-list" %}</a>
         <br>
-        Бонус детальніше- <a href="{% url "bonus-list" %}{id}/">"{% url "bonus-list" %}{id}/"</a>
+        GET / Бонус детальніше- <a href="{% url "bonus-list" %}{id}/">"{% url "bonus-list" %}{id}/"</a>
         <br>
     <h3>Результати менедерів</h3>
-        Список Результів - <a href="{% url "resultdaily-list" %}">{% url "resultdaily-list" %}</a>
+        GET / Список Результів - <a href="{% url "resultdaily-list" %}">{% url "resultdaily-list" %}</a>
         <br>
-        Результ детальніше - <a href="{% url "resultdaily-list" %}{id}/">"{% url "resultdaily-list" %}{id}/"</a>
+        GET / Результ детальніше - <a href="{% url "resultdaily-list" %}{id}/">"{% url "resultdaily-list" %}{id}/"</a>
+        <br>
+        POST / Створити результат - <a href="{% url "resultdaily-list" %}{id}/">"{% url "resultdaily-list" %}"</a>
         <br>
     </div>
 
