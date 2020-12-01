@@ -4,16 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
-from dvishparish.users.views import ListPremiumsAPI, DevApiView
 
-from rest_framework import routers
-
-# router = routers.DefaultRouter()
-# router.register(r'premius', ListPremiumsAPI)
-# router.register(r'bonus', DevApiView)
-# router.register(r'result', DevApiView)
-# router.register(r'users', DevApiView)
-# router.register(r'users/add/', DevApiView)
 from dvishparish.api import api
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
