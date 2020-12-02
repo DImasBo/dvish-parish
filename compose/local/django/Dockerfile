@@ -15,7 +15,9 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Requirements are installed here to ensure they will be cached.
-COPY ./requirements /requirements
+COPY ./requirements /requirements/local.txt
+COPY ./requirements /requirements/base.txt
+
 RUN pip install -r /requirements/local.txt
 
 COPY ./compose/production/django/entrypoint /entrypoint
