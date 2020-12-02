@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: build project
-        run: docker-compose -f local.yml build
-      - name: testing project
-        run: docker-compose -f local.yml run --rm django /test-start.sh
+        run: ls -la
+      - name: test action keys
+        run: echo "${{ secrets.USERNAME }}"
