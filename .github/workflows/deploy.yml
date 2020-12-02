@@ -17,11 +17,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: |
-            cd app/
-            git pull
-            echo "hello world"
-            docker-compose -f production.yml up -d --build
+        run: ./deploy1.sh
+          # script: |
+          #   cd app/
+          #   git pull
+          #   echo "hello world"
+          #   docker-compose -f production.yml up -d --build
 
 
 
