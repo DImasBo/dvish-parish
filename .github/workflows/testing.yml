@@ -27,6 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: build project
-        run: echo Hello, world!
+        run: docker-compose build
       - name: testing project
         run: docker-compose -f local.yml run --rm django /test-start.sh
