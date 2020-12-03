@@ -1,0 +1,3166 @@
+PostgreSQL is available
+System check identified some issues:
+
+WARNINGS:
+[33;1mplans.GeneralPlan.date_from: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`[0m
+[33;1mplans.KPI.date_from: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`[0m
+[33;1musers.Bonus.date: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`[0m
+[33;1musers.Premium.date: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`[0m
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "users",
+    "model": "bankoffice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "users",
+    "model": "premium"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "users",
+    "model": "bonus"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "manager_roles",
+    "model": "resultdaily"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "manager_roles",
+    "model": "resultitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "plans",
+    "model": "formula"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "plans",
+    "model": "generalplan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "plans",
+    "model": "kpi"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "plans",
+    "model": "managerplan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "plans",
+    "model": "managerkpi"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "plans",
+    "model": "kpiitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "plans",
+    "model": "bankofficeplan"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "plans",
+    "model": "bankofficekpi"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1ihgxf8jqds10dqwa3riitvorgai6fty",
+  "fields": {
+    "session_data": "NmM5NTFjMTYyMjY3MTJkNDJkMTNiNDQ1YmE2NDQ4ZjkwMzhlMWNiODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYTFhNDBjZmVjMTUxM2IxYTM2ZmQ0ZDA5ZTQ3MThjYmUyNWYwOGZjIn0=",
+    "expire_date": "2020-12-14T09:28:31.359Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "avj7akidze3vqiwn2zy6wltmf5h0tyc4",
+  "fields": {
+    "session_data": "OTU1Y2NiMGM5YzhhZDcxN2IzN2NkOTFlNGU5YzFkMDRhZjc5MTQ5YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYTFhNDBjZmVjMTUxM2IxYTM2ZmQ0ZDA5ZTQ3MThjYmUyNWYwOGZjIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-16T20:23:59.449Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cokrporl2t1bpbnsyw93slwrn7f5p4nm",
+  "fields": {
+    "session_data": "NzgwMWY1NTIzOTNmNmIxYzdiZTg1YTFiNDY3NTI5MDdkZWUyOTZlYTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYjkwNjQ1N2FjNzdhOTFhMDM4NWNhNjZiMjA4NmU2YTk1M2M2YzViIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-13T19:06:19.390Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d3jmd4scbqb8oic4bn3ejlqfq0xhba8p",
+  "fields": {
+    "session_data": "NzgwMWY1NTIzOTNmNmIxYzdiZTg1YTFiNDY3NTI5MDdkZWUyOTZlYTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYjkwNjQ1N2FjNzdhOTFhMDM4NWNhNjZiMjA4NmU2YTk1M2M2YzViIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-14T09:20:37.712Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g28exeeha0szctrvbdredfbxew1fpvhw",
+  "fields": {
+    "session_data": "OTU1Y2NiMGM5YzhhZDcxN2IzN2NkOTFlNGU5YzFkMDRhZjc5MTQ5YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYTFhNDBjZmVjMTUxM2IxYTM2ZmQ0ZDA5ZTQ3MThjYmUyNWYwOGZjIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-16T20:17:31.137Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j1115cltb025as7pbr16qbuz3ncj2ho9",
+  "fields": {
+    "session_data": "NzgwMWY1NTIzOTNmNmIxYzdiZTg1YTFiNDY3NTI5MDdkZWUyOTZlYTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYjkwNjQ1N2FjNzdhOTFhMDM4NWNhNjZiMjA4NmU2YTk1M2M2YzViIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-13T18:28:25.351Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ou382xfngq0my7y5mc48q47gmmrvbt87",
+  "fields": {
+    "session_data": "NzgwMWY1NTIzOTNmNmIxYzdiZTg1YTFiNDY3NTI5MDdkZWUyOTZlYTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiYjkwNjQ1N2FjNzdhOTFhMDM4NWNhNjZiMjA4NmU2YTk1M2M2YzViIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-13T19:15:16.129Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pd9t882rausbq416wgk53fwn6clw581o",
+  "fields": {
+    "session_data": "YjhjNjc5NzZmOWY0MThkYTBiNzIxNzdjZDI3NTIzY2NkN2IwMDdmZjp7Il9hdXRoX3VzZXJfaWQiOiI5IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwZTYyZGJlMmU3NDViYzE3YTY1YjdkN2FhY2JhNTI0ODk5YTY3MmJjIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-15T23:09:01.212Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qrbqk9zonc40a28avorvyxi0tatrag5s",
+  "fields": {
+    "session_data": "OTU1Y2NiMGM5YzhhZDcxN2IzN2NkOTFlNGU5YzFkMDRhZjc5MTQ5YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYTFhNDBjZmVjMTUxM2IxYTM2ZmQ0ZDA5ZTQ3MThjYmUyNWYwOGZjIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-13T20:31:18.765Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y80j0j0uk7kw1vg1vdagtohv9i1kvrab",
+  "fields": {
+    "session_data": "MjVhZDE0OWQ0ZWZkODZmZjc3NDQ1NjZhMGFjMmE4NjQ3YmQwOWQ1OTp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIxODcyZmFjMDEwOThkODc1NWY5MTY1ZjQ5NGJkN2E5ZmVhZTdhMDcxIiwiX3Nlc3Npb25fZXhwaXJ5IjowfQ==",
+    "expire_date": "2020-12-13T21:32:01.269Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "ca-motivation.ga",
+    "name": "dvish-parish"
+  }
+},
+{
+  "model": "users.bankoffice",
+  "pk": 122,
+  "fields": {
+    "city": "\u041a\u0438\u0457\u0432",
+    "address": "\u0432\u0443\u043b \u0442\u0442\u0435\u0441\u0442 12"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 1,
+  "fields": {
+    "result_daily": 1,
+    "KPI": 1,
+    "KPI_result_amount": "3.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 2,
+  "fields": {
+    "result_daily": 44,
+    "KPI": 1,
+    "KPI_result_amount": "40.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 3,
+  "fields": {
+    "result_daily": 44,
+    "KPI": 2,
+    "KPI_result_amount": "50.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 4,
+  "fields": {
+    "result_daily": 44,
+    "KPI": 3,
+    "KPI_result_amount": "150.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 5,
+  "fields": {
+    "result_daily": 45,
+    "KPI": 1,
+    "KPI_result_amount": "10.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 6,
+  "fields": {
+    "result_daily": 45,
+    "KPI": 3,
+    "KPI_result_amount": "100.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 7,
+  "fields": {
+    "result_daily": 45,
+    "KPI": 2,
+    "KPI_result_amount": "12.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 8,
+  "fields": {
+    "result_daily": 46,
+    "KPI": 1,
+    "KPI_result_amount": "150.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 9,
+  "fields": {
+    "result_daily": 47,
+    "KPI": 3,
+    "KPI_result_amount": "100.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 10,
+  "fields": {
+    "result_daily": 48,
+    "KPI": 3,
+    "KPI_result_amount": "150.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 11,
+  "fields": {
+    "result_daily": 1,
+    "KPI": 3,
+    "KPI_result_amount": "150.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 12,
+  "fields": {
+    "result_daily": 49,
+    "KPI": 1,
+    "KPI_result_amount": "13.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 13,
+  "fields": {
+    "result_daily": 50,
+    "KPI": 1,
+    "KPI_result_amount": "2.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 14,
+  "fields": {
+    "result_daily": 50,
+    "KPI": 3,
+    "KPI_result_amount": "800.00"
+  }
+},
+{
+  "model": "manager_roles.resultitem",
+  "pk": 15,
+  "fields": {
+    "result_daily": 51,
+    "KPI": 2,
+    "KPI_result_amount": "13.00"
+  }
+},
+{
+  "model": "plans.formula",
+  "pk": 1,
+  "fields": {
+    "name": "sample",
+    "percentage_on_salary": "20.00",
+    "percentage_of_the_plan": "100.00",
+    "is_bankoffice": false
+  }
+},
+{
+  "model": "plans.formula",
+  "pk": 2,
+  "fields": {
+    "name": "sample bankoffice",
+    "percentage_on_salary": "20.00",
+    "percentage_of_the_plan": "110.00",
+    "is_bankoffice": true
+  }
+},
+{
+  "model": "plans.kpi",
+  "pk": 1,
+  "fields": {
+    "is_general_plan": true,
+    "indicator_name": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d",
+    "formula": 1,
+    "formula_bankoffice": 2,
+    "target_amount": "60.00",
+    "date_from": "2020-11-25T00:22:23Z",
+    "date_to": "2020-12-29T00:24:29Z"
+  }
+},
+{
+  "model": "plans.kpi",
+  "pk": 2,
+  "fields": {
+    "is_general_plan": false,
+    "indicator_name": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d",
+    "formula": 1,
+    "formula_bankoffice": 2,
+    "target_amount": "70.00",
+    "date_from": "2020-10-26T22:22:09Z",
+    "date_to": "2020-11-28T11:17:21Z"
+  }
+},
+{
+  "model": "plans.kpi",
+  "pk": 3,
+  "fields": {
+    "is_general_plan": false,
+    "indicator_name": "\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432",
+    "formula": 1,
+    "formula_bankoffice": 2,
+    "target_amount": "70000.00",
+    "date_from": "2020-11-26T22:22:09Z",
+    "date_to": "2020-12-19T06:43:17Z"
+  }
+},
+{
+  "model": "plans.generalplan",
+  "pk": 2,
+  "fields": {
+    "date_from": "2020-10-26T00:42:19Z",
+    "date_to": "2020-11-26T00:42:19Z"
+  }
+},
+{
+  "model": "plans.kpiitem",
+  "pk": 1,
+  "fields": {
+    "KPI": 1,
+    "general_plan": 2
+  }
+},
+{
+  "model": "plans.kpiitem",
+  "pk": 2,
+  "fields": {
+    "KPI": 1,
+    "general_plan": 2
+  }
+},
+{
+  "model": "plans.kpiitem",
+  "pk": 3,
+  "fields": {
+    "KPI": 2,
+    "general_plan": 2
+  }
+},
+{
+  "model": "plans.kpiitem",
+  "pk": 4,
+  "fields": {
+    "KPI": 3,
+    "general_plan": 2
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 1,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 1,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 1,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 1,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 3,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 3,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 3,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 3,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 4,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 4,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 4,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 4,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 5,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 5,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 5,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 5,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 6,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 6,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 6,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 6,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add email address",
+    "content_type": 7,
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change email address",
+    "content_type": 7,
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": 7,
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view email address",
+    "content_type": 7,
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": 8,
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": 8,
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": 8,
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": 8,
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add social account",
+    "content_type": 9,
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change social account",
+    "content_type": 9,
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": 9,
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view social account",
+    "content_type": 9,
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add social application",
+    "content_type": 10,
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change social application",
+    "content_type": 10,
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": 10,
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view social application",
+    "content_type": 10,
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": 11,
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": 11,
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": 11,
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": 11,
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 12,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 12,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 12,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 12,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add bank office",
+    "content_type": 13,
+    "codename": "add_bankoffice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change bank office",
+    "content_type": 13,
+    "codename": "change_bankoffice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete bank office",
+    "content_type": 13,
+    "codename": "delete_bankoffice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view bank office",
+    "content_type": 13,
+    "codename": "view_bankoffice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add premium",
+    "content_type": 14,
+    "codename": "add_premium"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change premium",
+    "content_type": 14,
+    "codename": "change_premium"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete premium",
+    "content_type": 14,
+    "codename": "delete_premium"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view premium",
+    "content_type": 14,
+    "codename": "view_premium"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add bonus",
+    "content_type": 15,
+    "codename": "add_bonus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change bonus",
+    "content_type": 15,
+    "codename": "change_bonus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete bonus",
+    "content_type": 15,
+    "codename": "delete_bonus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view bonus",
+    "content_type": 15,
+    "codename": "view_bonus"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add result daily",
+    "content_type": 16,
+    "codename": "add_resultdaily"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change result daily",
+    "content_type": 16,
+    "codename": "change_resultdaily"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete result daily",
+    "content_type": 16,
+    "codename": "delete_resultdaily"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view result daily",
+    "content_type": 16,
+    "codename": "view_resultdaily"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add result item",
+    "content_type": 17,
+    "codename": "add_resultitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change result item",
+    "content_type": 17,
+    "codename": "change_resultitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete result item",
+    "content_type": 17,
+    "codename": "delete_resultitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view result item",
+    "content_type": 17,
+    "codename": "view_resultitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add formula",
+    "content_type": 18,
+    "codename": "add_formula"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change formula",
+    "content_type": 18,
+    "codename": "change_formula"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete formula",
+    "content_type": 18,
+    "codename": "delete_formula"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view formula",
+    "content_type": 18,
+    "codename": "view_formula"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add general plan",
+    "content_type": 19,
+    "codename": "add_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change general plan",
+    "content_type": 19,
+    "codename": "change_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete general plan",
+    "content_type": 19,
+    "codename": "delete_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view general plan",
+    "content_type": 19,
+    "codename": "view_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add kpi",
+    "content_type": 20,
+    "codename": "add_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change kpi",
+    "content_type": 20,
+    "codename": "change_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete kpi",
+    "content_type": 20,
+    "codename": "delete_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view kpi",
+    "content_type": 20,
+    "codename": "view_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add manager plan",
+    "content_type": 21,
+    "codename": "add_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change manager plan",
+    "content_type": 21,
+    "codename": "change_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete manager plan",
+    "content_type": 21,
+    "codename": "delete_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view manager plan",
+    "content_type": 21,
+    "codename": "view_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add manager kpi",
+    "content_type": 22,
+    "codename": "add_managerkpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change manager kpi",
+    "content_type": 22,
+    "codename": "change_managerkpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete manager kpi",
+    "content_type": 22,
+    "codename": "delete_managerkpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view manager kpi",
+    "content_type": 22,
+    "codename": "view_managerkpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add kp iitems",
+    "content_type": 23,
+    "codename": "add_kpiitems"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change kp iitems",
+    "content_type": 23,
+    "codename": "change_kpiitems"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete kp iitems",
+    "content_type": 23,
+    "codename": "delete_kpiitems"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view kp iitems",
+    "content_type": 23,
+    "codename": "view_kpiitems"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add bank office plan",
+    "content_type": 24,
+    "codename": "add_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change bank office plan",
+    "content_type": 24,
+    "codename": "change_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete bank office plan",
+    "content_type": 24,
+    "codename": "delete_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view bank office plan",
+    "content_type": 24,
+    "codename": "view_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add bank office kpi",
+    "content_type": 25,
+    "codename": "add_bankofficekpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change bank office kpi",
+    "content_type": 25,
+    "codename": "change_bankofficekpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete bank office kpi",
+    "content_type": 25,
+    "codename": "delete_bankofficekpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view bank office kpi",
+    "content_type": 25,
+    "codename": "view_bankofficekpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 101,
+  "fields": {
+    "name": "Plans.view Bankofficeplan",
+    "content_type": 12,
+    "codename": "plans.view_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 102,
+  "fields": {
+    "name": "Plans.view Managerplan",
+    "content_type": 12,
+    "codename": "plans.view_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 103,
+  "fields": {
+    "name": "Can add kp iitem",
+    "content_type": 23,
+    "codename": "add_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 104,
+  "fields": {
+    "name": "Can change kp iitem",
+    "content_type": 23,
+    "codename": "change_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 105,
+  "fields": {
+    "name": "Can delete kp iitem",
+    "content_type": 23,
+    "codename": "delete_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 106,
+  "fields": {
+    "name": "Can view kp iitem",
+    "content_type": 23,
+    "codename": "view_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 107,
+  "fields": {
+    "name": "Users.view User",
+    "content_type": 12,
+    "codename": "users.view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 108,
+  "fields": {
+    "name": "Plans.view Kpi",
+    "content_type": 12,
+    "codename": "plans.view_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 109,
+  "fields": {
+    "name": "Plans.add Kpi",
+    "content_type": 12,
+    "codename": "plans.add_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 110,
+  "fields": {
+    "name": "Plans.change Kpi",
+    "content_type": 12,
+    "codename": "plans.change_kpi"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 111,
+  "fields": {
+    "name": "Users.view Bankoffice",
+    "content_type": 12,
+    "codename": "users.view_bankoffice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 112,
+  "fields": {
+    "name": "Plans.view Generalplan",
+    "content_type": 12,
+    "codename": "plans.view_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 113,
+  "fields": {
+    "name": "Plans.change Managerplan",
+    "content_type": 12,
+    "codename": "plans.change_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 114,
+  "fields": {
+    "name": "Plans.add Managerplan",
+    "content_type": 12,
+    "codename": "plans.add_managerplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 115,
+  "fields": {
+    "name": "Plans.add Bankofficeplan",
+    "content_type": 12,
+    "codename": "plans.add_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 116,
+  "fields": {
+    "name": "Plans.change Bankofficeplan",
+    "content_type": 12,
+    "codename": "plans.change_bankofficeplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 117,
+  "fields": {
+    "name": "Plans.change Kpiitem",
+    "content_type": 12,
+    "codename": "plans.change_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 118,
+  "fields": {
+    "name": "Plans.add Kpiitem",
+    "content_type": 12,
+    "codename": "plans.add_kpiitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 119,
+  "fields": {
+    "name": "Plans.change Generalplan",
+    "content_type": 12,
+    "codename": "plans.change_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 120,
+  "fields": {
+    "name": "Plans.add Generalplan",
+    "content_type": 12,
+    "codename": "plans.add_generalplan"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 121,
+  "fields": {
+    "name": "Plans.view Kpiitem",
+    "content_type": 12,
+    "codename": "plans.view_kpiitem"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "manager",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "hr",
+    "permissions": [
+      69,
+      70,
+      71,
+      72,
+      74,
+      76,
+      77,
+      78,
+      79,
+      80,
+      103,
+      89,
+      104,
+      90,
+      105,
+      91,
+      106,
+      92,
+      57,
+      58,
+      59,
+      60,
+      53,
+      54,
+      55,
+      56,
+      109,
+      110,
+      108,
+      107,
+      48
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "businesses",
+    "permissions": [
+      64,
+      68,
+      97,
+      98,
+      99,
+      100,
+      72,
+      78,
+      80,
+      85,
+      86,
+      87,
+      88,
+      108,
+      121,
+      111,
+      107,
+      48
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "finance",
+    "permissions": [
+      62,
+      64,
+      68,
+      72,
+      73,
+      74,
+      75,
+      76,
+      78,
+      80,
+      52,
+      120,
+      118,
+      119,
+      117,
+      112,
+      121,
+      111,
+      107,
+      48
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$SG1SUG93eGoyRFAw$XThItoVK4n5cNisgXx9rFw",
+    "last_login": "2020-12-02T20:23:59.419Z",
+    "is_superuser": true,
+    "username": "mouse",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-25T23:15:54.509Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$QnMxZXZuWkVKYzdu$89AjgCA/hxIhvBxNY1xt7A",
+    "last_login": "2020-12-01T14:37:16Z",
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "manager",
+    "last_name": "manager",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-25T23:40:06Z",
+    "bankoffice": 122,
+    "salary": "10000.00",
+    "integration_id": "11115",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$ZVlycFBsZ1lTWUhZ$ay06kKBHSJ/if1pMnbtPJw",
+    "last_login": "2020-11-29T21:32:01.262Z",
+    "is_superuser": false,
+    "username": "finance",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:14:48Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      4
+    ],
+    "user_permissions": [
+      120,
+      118,
+      119,
+      117,
+      108,
+      121
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "tetst",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:16:52Z",
+    "bankoffice": 122,
+    "salary": "13000.00",
+    "integration_id": "11117",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$eHJhM0tJRERqdzNz$VvquqJ5B8BK+zmE++0cQIg",
+    "last_login": "2020-11-29T20:37:20.388Z",
+    "is_superuser": false,
+    "username": "hr",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:17:39.953Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": [
+      109,
+      110,
+      112,
+      108,
+      111,
+      107
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "argon2$argon2i$v=19$m=512,t=2,p=2$RllEd3d1a3NoTmUx$6kZbhcv7IzVVmohgOz3auw",
+    "last_login": "2020-12-01T23:09:01.170Z",
+    "is_superuser": false,
+    "username": "businesses",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-26T00:17:40.016Z",
+    "bankoffice": null,
+    "salary": "0.00",
+    "integration_id": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [
+      115,
+      114,
+      116,
+      113,
+      101,
+      102,
+      111,
+      107
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 10,
+  "fields": {
+    "password": "FRrvravXzMMqgaksBEgN",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kevin87",
+    "first_name": "Lisa",
+    "last_name": "West",
+    "email": "aaron48@bradshaw-randall.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11114",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 11,
+  "fields": {
+    "password": "BBHiaCRuFIovDpPPFjgL",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "frocha",
+    "first_name": "Fred",
+    "last_name": "Robinson",
+    "email": "colleen88@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11111",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 12,
+  "fields": {
+    "password": "ZkfQIdPvomQsRrWFeckF",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "petersdaniel",
+    "first_name": "Laura",
+    "last_name": "Schaefer",
+    "email": "robert56@hotmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11116",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 13,
+  "fields": {
+    "password": "GNZPJUNeYxQkWYgPhkuh",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "traci63",
+    "first_name": "Richard",
+    "last_name": "Romero",
+    "email": "matthewshaw@hernandez.net",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11117",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 14,
+  "fields": {
+    "password": "QOIAFhwsVavQPkwznlZb",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hurleytravis",
+    "first_name": "Mark",
+    "last_name": "Dodson",
+    "email": "lynnroger@yahoo.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11113",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 15,
+  "fields": {
+    "password": "cKIpiEQNCHQONMKJBVUL",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hernandezsean",
+    "first_name": "Anthony",
+    "last_name": "Aguilar",
+    "email": "bonillakelsey@hotmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-29T11:20:20Z",
+    "bankoffice": 122,
+    "salary": "15000.00",
+    "integration_id": "11112",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      101,
+      102
+    ]
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 1,
+  "fields": {
+    "amount": "150.00",
+    "date": "2020-11-28T15:09:04Z",
+    "status": "approved",
+    "user": 2
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 2,
+  "fields": {
+    "amount": "500.00",
+    "date": "2020-10-30T15:09:04Z",
+    "status": "approved",
+    "user": 2
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 3,
+  "fields": {
+    "amount": "200.00",
+    "date": "2020-09-28T14:09:04Z",
+    "status": "approved",
+    "user": 2
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 4,
+  "fields": {
+    "amount": "100.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 11
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 5,
+  "fields": {
+    "amount": "300.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "process",
+    "user": 11
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 6,
+  "fields": {
+    "amount": "200.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 15
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 7,
+  "fields": {
+    "amount": "300.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 14
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 8,
+  "fields": {
+    "amount": "50.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 10
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 9,
+  "fields": {
+    "amount": "100.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 12
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 10,
+  "fields": {
+    "amount": "150.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 6
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 11,
+  "fields": {
+    "amount": "170.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 13
+  }
+},
+{
+  "model": "users.premium",
+  "pk": 12,
+  "fields": {
+    "amount": "0.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "process",
+    "user": 12
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 1,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-11-25T15:09:04Z",
+    "status": "approved",
+    "user": 2
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 2,
+  "fields": {
+    "amount": "30.00",
+    "date": "2020-11-24T15:09:04Z",
+    "status": "approved",
+    "user": 2
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 3,
+  "fields": {
+    "amount": "20.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 11
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 4,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "process",
+    "user": 11
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 5,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "process",
+    "user": 15
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 6,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 15
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 7,
+  "fields": {
+    "amount": "20.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 14
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 8,
+  "fields": {
+    "amount": "5.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 10
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 9,
+  "fields": {
+    "amount": "10.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "approved",
+    "user": 12
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 10,
+  "fields": {
+    "amount": "30.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "process",
+    "user": 6
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 11,
+  "fields": {
+    "amount": "30.00",
+    "date": "2020-12-01T18:59:52Z",
+    "status": "approved",
+    "user": 13
+  }
+},
+{
+  "model": "users.bonus",
+  "pk": 12,
+  "fields": {
+    "amount": "0.00",
+    "date": "2020-12-01T18:59:53Z",
+    "status": "process",
+    "user": 12
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "date_add": "2020-11-26T01:01:53Z",
+    "date_update": "2020-11-30T09:22:54.320Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 44,
+  "fields": {
+    "user": 10,
+    "date_add": "2020-11-29T11:48:55.200Z",
+    "date_update": "2020-11-29T11:48:55.200Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 45,
+  "fields": {
+    "user": 11,
+    "date_add": "2020-11-29T11:50:14.289Z",
+    "date_update": "2020-11-29T11:50:14.289Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 46,
+  "fields": {
+    "user": 6,
+    "date_add": "2020-11-29T12:05:55.868Z",
+    "date_update": "2020-11-29T12:05:55.868Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 47,
+  "fields": {
+    "user": 12,
+    "date_add": "2020-11-29T12:06:15.212Z",
+    "date_update": "2020-11-29T12:06:15.212Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 48,
+  "fields": {
+    "user": 14,
+    "date_add": "2020-11-29T12:06:52.942Z",
+    "date_update": "2020-11-29T12:06:52.942Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 49,
+  "fields": {
+    "user": 13,
+    "date_add": "2020-11-29T12:14:21.884Z",
+    "date_update": "2020-11-29T12:14:21.884Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 50,
+  "fields": {
+    "user": 2,
+    "date_add": "2020-11-30T09:23:23.424Z",
+    "date_update": "2020-11-30T09:23:55.486Z"
+  }
+},
+{
+  "model": "manager_roles.resultdaily",
+  "pk": 51,
+  "fields": {
+    "user": 2,
+    "date_add": "2020-11-30T09:25:09.823Z",
+    "date_update": "2020-11-30T09:25:09.823Z"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "KPI": 1,
+    "amount": "15.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "KPI": 2,
+    "amount": "13.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "KPI": 3,
+    "amount": "10000.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 9,
+  "fields": {
+    "user": 10,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 10,
+  "fields": {
+    "user": 10,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 11,
+  "fields": {
+    "user": 10,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 15,
+  "fields": {
+    "user": 11,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 16,
+  "fields": {
+    "user": 11,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 17,
+  "fields": {
+    "user": 11,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 21,
+  "fields": {
+    "user": 12,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 22,
+  "fields": {
+    "user": 12,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 23,
+  "fields": {
+    "user": 12,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 27,
+  "fields": {
+    "user": 13,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 28,
+  "fields": {
+    "user": 13,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 29,
+  "fields": {
+    "user": 13,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 33,
+  "fields": {
+    "user": 14,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 34,
+  "fields": {
+    "user": 14,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 35,
+  "fields": {
+    "user": 14,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 39,
+  "fields": {
+    "user": 15,
+    "KPI": 1,
+    "amount": "0.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 40,
+  "fields": {
+    "user": 15,
+    "KPI": 2,
+    "amount": "150.00"
+  }
+},
+{
+  "model": "plans.managerkpi",
+  "pk": 41,
+  "fields": {
+    "user": 15,
+    "KPI": 3,
+    "amount": "300.00"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2020-11-29T16:53:55.228Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "hr",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2020-11-29T16:55:56.066Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "hr",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2020-11-29T16:56:34.491Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "hr",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2020-11-29T16:57:34.775Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "hr",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2020-11-29T20:37:45.241Z",
+    "user": 8,
+    "content_type": 20,
+    "object_id": "6",
+    "object_repr": "KqzKYNRIbktUVedyRYCO | 2020-11-26 22:22:09.027000+00:00 - 1976-03-07 05:32:46+00:00 0.00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2020-11-29T20:37:45.243Z",
+    "user": 8,
+    "content_type": 20,
+    "object_id": "5",
+    "object_repr": "JSgWJFVBfCOvMdFPexLj | 2020-11-26 22:22:09.027000+00:00 - 2007-01-10 09:06:30+00:00 0.00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2020-11-29T20:37:45.243Z",
+    "user": 8,
+    "content_type": 20,
+    "object_id": "4",
+    "object_repr": "QhOxecIBmcmphgxnYLUZ | 2020-11-26 22:22:09.027000+00:00 - 1983-11-18 01:38:11+00:00 0.00",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2020-11-29T21:16:59.577Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "businesses",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2020-11-29T21:19:12.642Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "businesses",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2020-11-29T21:20:26.581Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "businesses",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2020-11-29T21:22:15.420Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "businesses",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2020-11-29T21:23:33.763Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "businesses",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2020-11-29T21:25:22.792Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "finance",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2020-11-29T21:31:13.500Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "finance",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2020-11-29T21:32:41.416Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "finance",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2020-11-30T01:08:54.376Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "cart cash 2 | 2020-11-27 00:22:09+02:00 - 2020-12-28 13:17:21+02:00 0.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Formula\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2020-11-30T01:09:01.190Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "cart limit | 2020-11-27 00:22:09+02:00 - 2020-12-19 08:43:17+02:00 0.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Formula bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2020-11-30T09:18:06.035Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "1",
+    "object_repr": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d | 2020-11-25 02:22:23+02:00 - 2020-12-29 02:24:29+02:00 60",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Indicator name\", \"Target amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2020-11-30T09:19:16.647Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "cart limit | 2020-11-27 00:22:09+02:00 - 2020-12-19 08:43:17+02:00 70000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Target amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2020-11-30T09:19:34.037Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d | 2020-10-27 00:22:09+02:00 - 2020-11-28 13:17:21+02:00 0.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Indicator name\", \"Date from\", \"Date to\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2020-11-30T09:20:02.467Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "2",
+    "object_repr": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d | 2020-10-27 00:22:09+02:00 - 2020-11-28 13:17:21+02:00 70",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Target amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2020-11-30T09:21:12.276Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "1",
+    "object_repr": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d | 2020-11-25 00:22:23+00:00 - 2020-12-29 00:24:29+00:00 60.00 | manager - 15",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2020-11-30T09:21:24.335Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "2",
+    "object_repr": "\u041f\u0440\u043e\u0434\u0430\u0442\u0438 \u043a\u0430\u0440\u0442\u0438 \u201cCash\u201d | 2020-10-26 22:22:09+00:00 - 2020-11-28 11:17:21+00:00 70.00 | manager - 13",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2020-11-30T09:21:39.036Z",
+    "user": 1,
+    "content_type": 22,
+    "object_id": "5",
+    "object_repr": "cart limit | 2020-11-26 22:22:09+00:00 - 2020-12-19 06:43:17+00:00 70000.00 | manager - 10000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2020-11-30T09:22:43.305Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "manager - 2020-11-26 01:01:53+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"result item\", \"object\": \"\\u041f\\u0440\\u043e\\u0434\\u0430\\u0442\\u0438 \\u043a\\u0430\\u0440\\u0442\\u0438 \\u201cCash\\u201d | 2020-11-25 00:22:23+00:00 - 2020-12-29 00:24:29+00:00 60.00, 3\", \"fields\": [\"KPI result amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2020-11-30T09:22:54.321Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "manager - 2020-11-26 01:01:53+00:00",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2020-11-30T09:23:23.430Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "50",
+    "object_repr": "manager - 2020-11-30 09:23:23.424097+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"result item\", \"object\": \"\\u041f\\u0440\\u043e\\u0434\\u0430\\u0442\\u0438 \\u043a\\u0430\\u0440\\u0442\\u0438 \\u201cCash\\u201d | 2020-11-25 00:22:23+00:00 - 2020-12-29 00:24:29+00:00 60.00, 2\"}}, {\"added\": {\"name\": \"result item\", \"object\": \"cart limit | 2020-11-26 22:22:09+00:00 - 2020-12-19 06:43:17+00:00 70000.00, 1000\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2020-11-30T09:23:55.489Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "50",
+    "object_repr": "manager - 2020-11-30 09:23:23.424097+00:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"result item\", \"object\": \"cart limit | 2020-11-26 22:22:09+00:00 - 2020-12-19 06:43:17+00:00 70000.00, 800.00\", \"fields\": [\"KPI result amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2020-11-30T09:24:17.436Z",
+    "user": 1,
+    "content_type": 20,
+    "object_id": "3",
+    "object_repr": "\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u043a\u0440\u0435\u0434\u0438\u0442\u0456\u0432 | 2020-11-27 00:22:09+02:00 - 2020-12-19 08:43:17+02:00 70000.00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Indicator name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2020-11-30T09:25:09.825Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "51",
+    "object_repr": "manager - 2020-11-30 09:25:09.823858+00:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"result item\", \"object\": \"\\u041f\\u0440\\u043e\\u0434\\u0430\\u0442\\u0438 \\u043a\\u0430\\u0440\\u0442\\u0438 \\u201cCash\\u201d | 2020-10-26 22:22:09+00:00 - 2020-11-28 11:17:21+00:00 70.00, 13\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2020-11-30T09:29:16.867Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "14",
+    "object_repr": "hurleytravis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2020-11-30T09:29:27.319Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "kevin87",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2020-11-30T09:29:39.197Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "petersdaniel",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2020-11-30T09:29:47.334Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "traci63",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2020-11-30T09:30:02.678Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Bankoffice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2020-12-02T20:25:04.269Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "frocha",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Salary\", \"Bankoffice\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"frocha - 100UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"frocha - 20UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2020-12-02T20:25:24.619Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "frocha",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"frocha - 0UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"frocha - 0UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2020-12-02T20:26:17.910Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "hernandezsean",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\", \"Bankoffice\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"hernandezsean - 200UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"hernandezsean - 10UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"hernandezsean - 10UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2020-12-02T20:26:38.271Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "14",
+    "object_repr": "hurleytravis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"hurleytravis - 300UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"hurleytravis - 20UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2020-12-02T20:27:03.390Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "kevin87",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"kevin87 - 50UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"kevin87 - 5UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2020-12-02T20:27:25.340Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "manager",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"changed\": {\"name\": \"premium\", \"object\": \"manager - 150.00UAH 11/28/2020\", \"fields\": [\"Status\"]}}, {\"changed\": {\"name\": \"premium\", \"object\": \"manager - 500.00UAH 10/30/2020\", \"fields\": [\"Status\"]}}, {\"changed\": {\"name\": \"premium\", \"object\": \"manager - 200.00UAH 09/28/2020\", \"fields\": [\"Status\"]}}, {\"changed\": {\"name\": \"bonus\", \"object\": \"manager - 10.00UAH 11/25/2020\", \"fields\": [\"Status\"]}}, {\"changed\": {\"name\": \"bonus\", \"object\": \"manager - 30.00UAH 11/24/2020\", \"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2020-12-02T20:27:43.543Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "petersdaniel",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"petersdaniel - 0UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"petersdaniel - 0UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2020-12-02T20:28:06.336Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"test - 150UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"test - 30UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2020-12-02T20:28:35.617Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "traci63",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Integration id\", \"Salary\"]}}, {\"added\": {\"name\": \"premium\", \"object\": \"traci63 - 170UAH 12/01/2020\"}}, {\"added\": {\"name\": \"bonus\", \"object\": \"traci63 - 30UAH 12/01/2020\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2020-12-02T20:30:28.843Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "frocha",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"premium\", \"object\": \"frocha - 300UAH 12/01/2020\", \"fields\": [\"Amount\"]}}, {\"changed\": {\"name\": \"bonus\", \"object\": \"frocha - 10UAH 12/01/2020\", \"fields\": [\"Amount\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2020-12-02T20:31:13.033Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "petersdaniel",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"premium\", \"object\": \"petersdaniel - 0UAH 12/01/2020\"}}, {\"changed\": {\"name\": \"premium\", \"object\": \"petersdaniel - 100UAH 12/01/2020\", \"fields\": [\"Amount\"]}}, {\"added\": {\"name\": \"bonus\", \"object\": \"petersdaniel - 0UAH 12/01/2020\"}}, {\"changed\": {\"name\": \"bonus\", \"object\": \"petersdaniel - 10UAH 12/01/2020\", \"fields\": [\"Amount\"]}}]"
+  }
+}
+]
