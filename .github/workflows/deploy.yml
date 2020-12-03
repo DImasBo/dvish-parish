@@ -21,7 +21,7 @@ jobs:
             cd app/
             git pull
             echo "hello world"
-            sudo `which docker-compose` -f production.yml up -d --build
+            /home/ec2-user/.local/bin/docker-compose -f production.yml up -d --build
 
 
 
