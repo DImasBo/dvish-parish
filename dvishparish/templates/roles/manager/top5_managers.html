@@ -14,16 +14,21 @@
 	    </thead>
 	    <tbody>
 	    	{% for top in tops %}
-	        <tr>
+	        <tr {% if top.is_self %}
+	            class="bg-success"
+                {% endif %}
+            >
+                {% if top.is_self %}
 	            <td class="text-center">
-                    {% if top.number %}
-                        твоє місце
+
                         {{ top.number }}
-                    {% else %}
-                        {{ forloop.counter }}
-                    {% endif %}
                 </td>
-	            <td>{{top.user}}</td>
+	                {% else %}
+                <td class="text-center">
+                        {{ forloop.counter }}
+                </td>
+	                {% endif %}
+                <td>{{top.user}}</td>
 	            <td>{{ top.sum_kpis }} </td>
 	        </tr>
 	        {% endfor %}
