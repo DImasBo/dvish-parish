@@ -59,11 +59,12 @@
             </li>
 
             {% if request.user.is_authenticated %}
+                {% if user.groups.first.name == "manager" %}
+
               <li class="nav-item">
                 {# URL provided by django-allauth/account/urls.py #}
                 <a class="nav-link" {% if request.path == "/users/" %}style="background-color: #4dd0e1"{% endif %} href="{{ user.get_absolute_url }}">{% trans "Мій профіль" %}</a>
-              </li>
-              <li class="nav-item">
+              </li>              <li class="nav-item">
                 <a class="nav-link"  {% if request.path == "/dashboard/KPIs/" %}style="background-color: #4dd0e1"{% endif %} href="{% url 'manager_roles:self_kpis' %}">{% trans "Ваші квести" %}</a>
               </li>
                 <li class="nav-item">
@@ -72,6 +73,7 @@
                 <li class="nav-item">
                 <a class="nav-link" {% if request.path == "/dashboard/kpis_list/" %}style="background-color: #4dd0e1"{% endif %}  href="{% url 'manager_roles:list_kips' %}">{% trans "Квести і нагороди" %}</a>
               </li>
+                    {% endif %}
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Вийти" %}</a>
               </li>
