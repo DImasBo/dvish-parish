@@ -21,4 +21,5 @@ jobs:
             cd app/
             git pull
             echo "hello world"
+            /home/ec2-user/.local/bin/docker-compose -f production.yml run --rm django python manage.py migrate
             /home/ec2-user/.local/bin/docker-compose -f production.yml up -d --build
